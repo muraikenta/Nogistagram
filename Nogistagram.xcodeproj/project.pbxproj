@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
+		2491A87F1DA10DA500C552EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87E1DA10DA500C552EB /* ViewController.swift */; };
+		2491A8821DA10DA500C552EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Main.storyboard */; };
+		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
+		2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2491A87E1DA10DA500C552EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2491A8811DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2491A8831DA10DA500C552EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2491A8861DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2491A8881DA10DA500C552EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2491A8761DA10DA500C552EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2491A8701DA10DA400C552EB = {
+			isa = PBXGroup;
+			children = (
+				2491A87B1DA10DA500C552EB /* Nogistagram */,
+				2491A87A1DA10DA500C552EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2491A87A1DA10DA500C552EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2491A8791DA10DA500C552EB /* Nogistagram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2491A87B1DA10DA500C552EB /* Nogistagram */ = {
+			isa = PBXGroup;
+			children = (
+				2491A87C1DA10DA500C552EB /* AppDelegate.swift */,
+				2491A87E1DA10DA500C552EB /* ViewController.swift */,
+				2491A8801DA10DA500C552EB /* Main.storyboard */,
+				2491A8831DA10DA500C552EB /* Assets.xcassets */,
+				2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */,
+				2491A8881DA10DA500C552EB /* Info.plist */,
+			);
+			path = Nogistagram;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2491A8781DA10DA500C552EB /* Nogistagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2491A88B1DA10DA500C552EB /* Build configuration list for PBXNativeTarget "Nogistagram" */;
+			buildPhases = (
+				2491A8751DA10DA500C552EB /* Sources */,
+				2491A8761DA10DA500C552EB /* Frameworks */,
+				2491A8771DA10DA500C552EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nogistagram;
+			productName = Nogistagram;
+			productReference = 2491A8791DA10DA500C552EB /* Nogistagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2491A8711DA10DA400C552EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "村井謙太";
+				TargetAttributes = {
+					2491A8781DA10DA500C552EB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GQXC5M8H66;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2491A8741DA10DA400C552EB /* Build configuration list for PBXProject "Nogistagram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2491A8701DA10DA400C552EB;
+			productRefGroup = 2491A87A1DA10DA500C552EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2491A8781DA10DA500C552EB /* Nogistagram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2491A8771DA10DA500C552EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */,
+				2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */,
+				2491A8821DA10DA500C552EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2491A8751DA10DA500C552EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2491A87F1DA10DA500C552EB /* ViewController.swift in Sources */,
+				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2491A8801DA10DA500C552EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2491A8811DA10DA500C552EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2491A8861DA10DA500C552EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2491A8891DA10DA500C552EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2491A88A1DA10DA500C552EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2491A88C1DA10DA500C552EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GQXC5M8H66;
+				INFOPLIST_FILE = Nogistagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Nogistagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2491A88D1DA10DA500C552EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GQXC5M8H66;
+				INFOPLIST_FILE = Nogistagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Nogistagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2491A8741DA10DA400C552EB /* Build configuration list for PBXProject "Nogistagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2491A8891DA10DA500C552EB /* Debug */,
+				2491A88A1DA10DA500C552EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2491A88B1DA10DA500C552EB /* Build configuration list for PBXNativeTarget "Nogistagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2491A88C1DA10DA500C552EB /* Debug */,
+				2491A88D1DA10DA500C552EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2491A8711DA10DA400C552EB /* Project object */;
+}
