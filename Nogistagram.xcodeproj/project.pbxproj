@@ -94,8 +94,8 @@
 		FC0966771DA2746000433A4C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				FC09667B1DA2751800433A4C /* .keep */,
+				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

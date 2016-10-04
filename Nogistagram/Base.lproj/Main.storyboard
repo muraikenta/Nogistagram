@@ -35,15 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nogistagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOC-oO-nj6">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="4j5-7A-5jm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GA-RV-04L">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GA-RV-04L">
+                                <frame key="frameInset" minX="27.5" minY="275" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="IcM-qG-TCq"/>
                                 </constraints>
@@ -51,7 +44,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-ZI-wA0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-ZI-wA0">
+                                <frame key="frameInset" minX="27.5" minY="223" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="2aR-fc-Kq3"/>
                                 </constraints>
@@ -59,22 +53,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y2-4n-B0V">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y2-4n-B0V">
+                                <frame key="frameInset" minX="27.5" minY="327" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Dj9-OB-G1Q"/>
                                 </constraints>
                                 <state key="normal" title="ログイン"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="9eZ-LO-mTy">
+                                <frame key="frameInset" minX="67" minY="150" width="240" height="65"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.56026605576842692" green="0.16821327692371754" blue="0.6640625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="9eZ-LO-mTy" firstAttribute="top" secondItem="tLH-tG-vAf" secondAttribute="bottom" constant="130" id="0yZ-wG-dTx"/>
                             <constraint firstItem="6y2-4n-B0V" firstAttribute="top" secondItem="3GA-RV-04L" secondAttribute="bottom" constant="22" id="1PR-Eg-gKU"/>
-                            <constraint firstItem="DOC-oO-nj6" firstAttribute="top" secondItem="tLH-tG-vAf" secondAttribute="bottom" constant="148" id="5gG-tR-8fc"/>
                             <constraint firstItem="3GA-RV-04L" firstAttribute="top" secondItem="WUZ-ZI-wA0" secondAttribute="bottom" constant="22" id="Euu-hK-GBb"/>
                             <constraint firstItem="WUZ-ZI-wA0" firstAttribute="centerX" secondItem="KE2-F6-f8O" secondAttribute="centerX" id="GXP-lY-aGd"/>
-                            <constraint firstItem="WUZ-ZI-wA0" firstAttribute="top" secondItem="DOC-oO-nj6" secondAttribute="bottom" constant="22" id="PyD-EW-vbQ"/>
-                            <constraint firstItem="DOC-oO-nj6" firstAttribute="centerX" secondItem="KE2-F6-f8O" secondAttribute="centerX" id="jKX-Ps-WwE"/>
+                            <constraint firstItem="WUZ-ZI-wA0" firstAttribute="top" secondItem="9eZ-LO-mTy" secondAttribute="bottom" constant="8" id="bel-Qn-t1g"/>
                             <constraint firstItem="6y2-4n-B0V" firstAttribute="centerX" secondItem="KE2-F6-f8O" secondAttribute="centerX" id="pj7-qX-xJf"/>
+                            <constraint firstItem="9eZ-LO-mTy" firstAttribute="centerX" secondItem="KE2-F6-f8O" secondAttribute="centerX" id="rzJ-7Z-KYx"/>
                             <constraint firstItem="3GA-RV-04L" firstAttribute="centerX" secondItem="KE2-F6-f8O" secondAttribute="centerX" id="wiW-ZK-Kf1"/>
                         </constraints>
                     </view>
@@ -84,4 +82,7 @@
             <point key="canvasLocation" x="141.59999999999999" y="823.53823088455783"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_white" width="325" height="60"/>
+    </resources>
 </document>
