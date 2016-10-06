@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242FC08A1DA64D8D008B23AB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0871DA64D8D008B23AB /* Bolts.framework */; };
+		242FC08B1DA64D8D008B23AB /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0881DA64D8D008B23AB /* FacebookCore.framework */; };
+		242FC08C1DA64D8D008B23AB /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0891DA64D8D008B23AB /* FacebookLogin.framework */; };
+		242FC08E1DA64F8E008B23AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC08D1DA64F8E008B23AB /* FBSDKCoreKit.framework */; };
+		242FC0911DA65071008B23AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */; };
+		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
+		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Main.storyboard */; };
 		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
 		2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */; };
 		FC0966751DA272D400433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC0966741DA272D400433A4C /* .keep */; };
-		FC09667A1DA274CB00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC0966791DA274CB00433A4C /* .keep */; };
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
@@ -23,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242FC0871DA64D8D008B23AB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		242FC0881DA64D8D008B23AB /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
+		242FC0891DA64D8D008B23AB /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
+		242FC08D1DA64F8E008B23AB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		242FC0941DA65337008B23AB /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		242FC0961DA66698008B23AB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2491A8811DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +43,6 @@
 		2491A8861DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2491A8881DA10DA500C552EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC0966741DA272D400433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
-		FC0966791DA274CB00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .keep; path = ../../../../Documents/.keep; sourceTree = "<group>"; };
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */,
+				242FC0911DA65071008B23AB /* FBSDKLoginKit.framework in Frameworks */,
+				242FC08E1DA64F8E008B23AB /* FBSDKCoreKit.framework in Frameworks */,
+				242FC08A1DA64D8D008B23AB /* Bolts.framework in Frameworks */,
+				242FC08B1DA64D8D008B23AB /* FacebookCore.framework in Frameworks */,
+				242FC08C1DA64D8D008B23AB /* FacebookLogin.framework in Frameworks */,
 				FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */,
 				FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */,
 				FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */,
@@ -54,9 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242FC0861DA64D8D008B23AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242FC0961DA66698008B23AB /* SnapKit.framework */,
+				242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */,
+				242FC08D1DA64F8E008B23AB /* FBSDKCoreKit.framework */,
+				242FC0871DA64D8D008B23AB /* Bolts.framework */,
+				242FC0881DA64D8D008B23AB /* FacebookCore.framework */,
+				242FC0891DA64D8D008B23AB /* FacebookLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2491A8701DA10DA400C552EB = {
 			isa = PBXGroup;
 			children = (
+				242FC0861DA64D8D008B23AB /* Frameworks */,
 				2491A87B1DA10DA500C552EB /* Nogistagram */,
 				2491A87A1DA10DA500C552EB /* Products */,
 				FC5A71CD1DA65EEE00F58C4A /* Frameworks */,
@@ -98,7 +130,7 @@
 		FC0966761DA2745900433A4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FC0966791DA274CB00433A4C /* .keep */,
+				242FC0941DA65337008B23AB /* .keep */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,7 +173,7 @@
 				2491A8751DA10DA500C552EB /* Sources */,
 				2491A8761DA10DA500C552EB /* Frameworks */,
 				2491A8771DA10DA500C552EB /* Resources */,
-				FC5A71D41DA65F3600F58C4A /* ShellScript */,
+				242FC08F1DA64FA0008B23AB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,24 +225,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC09667C1DA2751800433A4C /* .keep in Resources */,
-				FC09667A1DA274CB00433A4C /* .keep in Resources */,
 				FC0966751DA272D400433A4C /* .keep in Resources */,
 				2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */,
 				2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */,
 				2491A8821DA10DA500C552EB /* Main.storyboard in Resources */,
 				FC09667E1DA2754F00433A4C /* .keep in Resources */,
+				242FC0951DA65337008B23AB /* .keep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FC5A71D41DA65F3600F58C4A /* ShellScript */ = {
+		242FC08F1DA64FA0008B23AB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FacebookCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKCoreKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Bolts.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FacebookLogin.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSDKLoginKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
@@ -361,6 +399,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Nogistagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Nogistagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +417,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Nogistagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Nogistagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";

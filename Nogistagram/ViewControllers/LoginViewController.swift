@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
+import SnapKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
+        loginButton.delegate = self
+        
+        view.addSubview(loginButton)
+        
+        loginButton.snp.makeConstraints { make in
+            make.bottom.equalTo(view).offset(-60)
+            make.centerX.equalToSuperview()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +32,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        let connection = GraphRequestConnection()
+        connection.add(
+            GraphRequest(graphPath: "me?fields=id,name,email"),
+            batchParameters: nil,
+            completion: { (error, result) in
+                print(result)
+                
+            }
+        )
+        connection.start()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+    }
 
     /*
     // MARK: - Navigation
