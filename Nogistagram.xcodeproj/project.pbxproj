@@ -16,6 +16,7 @@
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
+		FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
+				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 			);
