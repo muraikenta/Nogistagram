@@ -39,13 +39,10 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
             batchParameters: nil,
             completion: { (error, result) in
                 print(result)
+                
             }
         )
         connection.start()
-        
-        if let accessToken = AccessToken.current {
-            print(accessToken)
-        }
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
