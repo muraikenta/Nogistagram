@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegistrationViewController: UIViewController {
+
+    // MARK: Properties
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +36,19 @@ class RegistrationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // MARK: Actions
+    @IBAction func register(_ sender: UIButton) {
+        let parameters: [String: String] = [
+            "email": emailField.text ?? "",
+            "password": passwordField.text ?? "",
+            "password_confirmation": passwordField.text ?? "",
+        ]
+        Alamofire
+            .request("http://localhost:3002/api/auth", method: .post, parameters: parameters)
+            .responseJSON { response in
+                print(response)
+            }
+    }
 
 }
