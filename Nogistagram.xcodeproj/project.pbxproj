@@ -22,6 +22,10 @@
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
+		FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */; };
+		FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */; };
+		FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */; };
+		FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,9 @@
 				242FC08A1DA64D8D008B23AB /* Bolts.framework in Frameworks */,
 				242FC08B1DA64D8D008B23AB /* FacebookCore.framework in Frameworks */,
 				242FC08C1DA64D8D008B23AB /* FacebookLogin.framework in Frameworks */,
+				FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */,
+				FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */,
+				FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,7 @@
 				242FC0861DA64D8D008B23AB /* Frameworks */,
 				2491A87B1DA10DA500C552EB /* Nogistagram */,
 				2491A87A1DA10DA500C552EB /* Products */,
+				FC5A71CD1DA65EEE00F58C4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +140,7 @@
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
+				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +151,16 @@
 				FC09667D1DA2754F00433A4C /* .keep */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC5A71CD1DA65EEE00F58C4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */,
+				FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */,
+				FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +249,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FacebookLogin.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FBSDKLoginKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -240,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 			);
