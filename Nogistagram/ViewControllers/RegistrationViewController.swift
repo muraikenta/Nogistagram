@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
+import KeychainAccess
 
 class RegistrationViewController: UIViewController {
 
@@ -48,6 +50,20 @@ class RegistrationViewController: UIViewController {
             .request("http://localhost:3002/api/auth", method: .post, parameters: parameters)
             .responseJSON { response in
                 print(response)
+                if response.response!.statusCode == 200 {
+                    let headers = response.response!.allHeaderFields
+
+                    let accessToken: String = headers["Access-Token"]! as! String
+                    let uid: String = headers["Uid"]! as! String
+                    let clientId: String = headers["Client"]! as! String
+
+                    let keychain = Keychain(service: "com.nogistagram")
+                    keychain["accessToken"] = accessToken
+                    keychain["uid"] = uid
+                    keychain["clientId"] = clientId
+                } else {
+                    print("ERROR!!!!")
+                }
             }
     }
 
