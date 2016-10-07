@@ -23,6 +23,7 @@
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
 		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
+		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */; };
 		FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */; };
 		FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */; };
@@ -48,6 +49,7 @@
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -93,9 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				242FC0861DA64D8D008B23AB /* Frameworks */,
+				FC5A71CD1DA65EEE00F58C4A /* Frameworks */,
 				2491A87B1DA10DA500C552EB /* Nogistagram */,
 				2491A87A1DA10DA500C552EB /* Products */,
-				FC5A71CD1DA65EEE00F58C4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
+				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 			);
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
+				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 			);
