@@ -11,4 +11,5 @@ https://app.moqups.com/muraikenta0507@gmail.com/pDuroDgzov/edit/page/a30781dd4
 ```bash
 $ gem install synx
 $ brew install swiftlint
+$ carthage update --platform iOS
 ```
