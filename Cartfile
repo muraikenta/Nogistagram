@@ -6,3 +6,4 @@ github "Hearst-DD/ObjectMapper"
 # github "rs/SDWebImage"
 github "facebook/facebook-sdk-swift"
 github "SnapKit/SnapKit" ~> 3.0
+github "kishikawakatsumi/KeychainAccess"
