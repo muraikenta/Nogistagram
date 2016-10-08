@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -37,6 +37,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="jki-N0-zsX" kind="show" identifier="toAccountRegistration" id="EZe-sB-HNU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blb-q1-9Sb">
+                                <frame key="frameInset" minX="260" minY="617" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WSG-hF-x8M" kind="show" identifier="toLogin" id="GyN-bf-KGD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,6 +96,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.18797566160000001" green="0.4806344005" blue="1" alpha="0.8024988918" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="HiA-U7-LtG" kind="show" identifier="toUniqueNameRegistration" id="TPP-ks-nD2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bmW-td-F3g">
                                 <constraints>
@@ -106,10 +119,14 @@
                             <constraint firstItem="bmW-td-F3g" firstAttribute="top" secondItem="yAf-xQ-rmq" secondAttribute="bottom" constant="20" id="gT3-jC-uoe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="bmW-td-F3g" id="5SE-Fy-HuV"/>
+                        <outlet property="userNameField" destination="yAf-xQ-rmq" id="JmI-U3-CP4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEe-6U-Yu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="37"/>
+            <point key="canvasLocation" x="945" y="90"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TLj-li-UNC">
@@ -178,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMI-yJ-Atn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="823.53823088455783"/>
+            <point key="canvasLocation" x="33" y="803"/>
         </scene>
         <!--Unique Name Registration View Controller-->
         <scene sceneID="Re4-Yg-kqd">
@@ -212,6 +229,9 @@
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="register:" destination="HiA-U7-LtG" eventType="touchUpInside" id="drN-9E-JPB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登録することで、利用規約およびプライバシーポリシーに同意するものとします" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plB-G8-NLk">
                                 <frame key="frameInset" minX="27" minY="449" width="320" height="41"/>
@@ -223,13 +243,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.76410864558781322" green="0.42590779051453342" blue="0.88403959424083767" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="uniqueNameField" destination="9XB-LC-O2q" id="tzg-Ah-JCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogG-TL-cno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005.6" y="821.73913043478262"/>
+            <point key="canvasLocation" x="945" y="803"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo_white" width="325" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="prI-iO-unW"/>
+    </inferredMetricsTieBreakers>
 </document>
