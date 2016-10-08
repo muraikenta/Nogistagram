@@ -5,5 +5,5 @@ github "Hearst-DD/ObjectMapper"
 github "ankurp/Dollar"
 # github "rs/SDWebImage"
 github "facebook/facebook-sdk-swift"
-github "SnapKit/SnapKit" ~> 3.0
+github "SnapKit/SnapKit" == 3.0.2
 github "kishikawakatsumi/KeychainAccess"
