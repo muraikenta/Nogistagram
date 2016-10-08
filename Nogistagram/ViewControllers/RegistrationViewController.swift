@@ -31,12 +31,17 @@ class RegistrationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "toAccountRegistration" {
-            let accountRegistrationViewController = segue.destination as! AccountRegistrationViewController
+        let destinationController: UIViewController = segue.destination
+        switch segue.identifier! {
+        case "toAccountRegistration":
             let email = emailField.text
             let userParams: [String: String] = ["email": email!]
+            let accountRegistrationViewController = destinationController as! AccountRegistrationViewController
             accountRegistrationViewController.userParams = userParams
+        default:
+            break
         }
+
     }
 
 }
