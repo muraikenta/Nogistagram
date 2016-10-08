@@ -14,6 +14,7 @@
 		242FC0911DA65071008B23AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */; };
 		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
 		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
+		242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Main.storyboard */; };
 		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		242FC0941DA65337008B23AB /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		242FC0961DA66698008B23AB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueNameRegistrationViewController.swift; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2491A8811DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
+				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
+				242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
