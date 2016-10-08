@@ -10,6 +10,10 @@ import UIKit
 
 class AccountRegistrationViewController: UIViewController {
 
+    // MARK: Properties
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+
     var userParams: [String : String] = [:]
 
     override func viewDidLoad() {
@@ -25,14 +29,25 @@ class AccountRegistrationViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destinationController: UIViewController = segue.destination
+        switch segue.identifier! {
+        case "toUniqueNameRegistration":
+            let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
+            let userName = userNameField.text
+            let password = passwordField.text
+            userParams["name"] = userName!
+            userParams["password"] = password!
+            userParams["password_confirmation"] = password!
+            uniqueNameRegistrationViewController.userParams = userParams
+        default:
+            break
+        }
     }
-    */
 
 }
