@@ -24,7 +24,7 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        performSegueAfterLogin(userParams: userParams)
+        tryToSignIn(userParams: userParams)
     }
     
     override func didReceiveMemoryWarning() {

@@ -10,15 +10,16 @@ import UIKit
 import FacebookCore
 import FacebookLogin
 import SnapKit
+import Alamofire
+import KeychainAccess
 
 protocol FacebookLoginable: LoginButtonDelegate {
-    var userParams: [String: String] { get set }
     func addFacebookLoginButton()
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult)
     func loginButtonDidLogOut(_ loginButton: LoginButton)
     func graphRequest()
     func graphRequestDidComplete(userParams: [String: String])
-    func performSegueAfterLogin(userParams: [String: String])
+    func tryToSignIn(userParams: [String: String])
 }
 
 extension FacebookLoginable where Self: UIViewController {
@@ -75,9 +76,36 @@ extension FacebookLoginable where Self: UIViewController {
         connection.start()
     }
     
-    func performSegueAfterLogin(userParams: [String: String]) {
-        if AccessToken.current != nil {
-            self.performSegue(withIdentifier: "toUniqueNameRegistration", sender: userParams)
-        }
+    func tryToSignIn(userParams: [String: String]) {
+        if AccessToken.current == nil { return }
+        
+        Alamofire
+            .request("\(Constant.Api.root)/omniauth/sign_in", method: .post, parameters: userParams)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let headers = response.response!.allHeaderFields
+                    let accessToken: String = headers["Access-Token"]! as! String
+                    let uid: String = headers["Uid"]! as! String
+                    let clientId: String = headers["Client"]! as! String
+
+                    let keychain = Keychain(service: Constant.Keychain.service)
+                    do {
+                        try keychain.set(accessToken, key: "accessToken")
+                        try keychain.set(uid, key: "uid")
+                        try keychain.set(clientId, key: "clientId")
+                        
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                        self.present(tabBarController, animated: true, completion: nil)
+                    } catch let error {
+                        print(error)
+                    }
+
+                case .failure(_):
+                    self.performSegue(withIdentifier: "toUniqueNameRegistration", sender: userParams)
+                }
+            }
     }
 }
