@@ -8,6 +8,7 @@
 
 import UIKit
 import FacebookCore
+import KeychainAccess
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let keychain = Keychain(service: Constant.Keychain.service)
+        do {
+            let uid: String? = try keychain.get("uid")
+            if uid != nil {
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") 
+            }
+        } catch let error {
+            print(error)
+        }
         return true
     }
 
