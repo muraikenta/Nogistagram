@@ -70,7 +70,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                         "email": response.dictionaryValue!["email"] as! String,
                         "uid": response.dictionaryValue!["id"] as! String,
                         "provider": "facebook",
-                        "oauth_token": AccessToken.current!.authenticationToken,
+                        "omniauth_token": AccessToken.current!.authenticationToken,
                     ]
                     
                     // TODO: emailのバリデーション
