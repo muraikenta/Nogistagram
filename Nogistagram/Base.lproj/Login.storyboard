@@ -132,7 +132,7 @@
         <!--Login View Controller-->
         <scene sceneID="TLj-li-UNC">
             <objects>
-                <viewController id="WSG-hF-x8M" customClass="LoginViewController" customModule="Nogistagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="WSG-hF-x8M" customClass="LoginViewController" customModule="Nogistagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLH-tG-vAf"/>
                         <viewControllerLayoutGuide type="bottom" id="DGq-9Z-3UG"/>
@@ -257,6 +257,6 @@
         <image name="logo_white" width="325" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gaR-Go-1Sc"/>
+        <segue reference="prI-iO-unW"/>
     </inferredMetricsTieBreakers>
 </document>

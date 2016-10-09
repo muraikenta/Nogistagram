@@ -7,38 +7,69 @@
 //
 
 import UIKit
-import Dollar
+import KeychainAccess
+import FacebookCore
 
 class SettingsTableViewController: UITableViewController {
     
-    let sectionComponents: [(title: String, cells: [(title: String, action: () -> Void)])] = [
-        (
-            title: "アカウント",
-            cells: [
-                (title: "プロフィールを編集", action: {}),
-                (title: "パスワードを変更", action: {}),
-                (title: "「いいね！」した投稿", action: {}),
-            ]
-        ),
-        (
-            title: " ",
-            cells: [
-                (title: "検索履歴を削除", action: {}),
-                (title: "ログアウト", action: {}),
-            ]
-        ),
-    ]
-
+    struct Section {
+        let title: String
+        let cells: [Cell]
+    }
+    
+    struct Cell {
+        let title: String
+        let action: () -> Void
+    }
+    
+    var sections: [Section] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // selfを用いたいので、viewDidLoad内で中身を代入
+        sections = [
+            Section(
+                title: "アカウント",
+                cells: [
+                    Cell(title: "プロフィールを編集", action: {}),
+                    Cell(title: "パスワードを変更", action: {}),
+                    Cell(title: "「いいね！」した投稿", action: {}),
+                ]
+            ),
+            Section(
+                title: " ",
+                cells: [
+                    Cell(title: "検索履歴を削除", action: {}),
+                    Cell(title: "ログアウト", action: self.logout),
+                ]
+            )
+        ]
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    func logout() {
+        let keychain = Keychain(service: Constant.Keychain.service)
+        do {
+            try keychain.remove("uid")
+            try keychain.remove("accessToken")
+            try keychain.remove("clientId")
+            
+            AccessToken.current = nil
+            
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.present(loginViewController, animated: true, completion: nil)
+        } catch let error {
+            print(error)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,22 +78,27 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionComponents.count
+        return sections.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionComponents[section].title
+        return sections[section].title
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionComponents[section].cells.count
+        return sections[section].cells.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
-        cell.textLabel?.text = sectionComponents[indexPath.section].cells[indexPath.row].title
+        cell.textLabel?.text = sections[indexPath.section].cells[indexPath.row].title
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sections[indexPath.section].cells[indexPath.row].action()
+    }
+    
 
     /*
     // MARK: - Navigation
