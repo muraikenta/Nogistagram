@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="U97-Fp-Sye" id="tV5-05-VdV"/>
+                        <segue destination="HiA-U7-LtG" kind="show" identifier="toUniqueNameRegistration" id="gaR-Go-1Sc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEe-6U-Yu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="137"/>
+            <point key="canvasLocation" x="910" y="38"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TLj-li-UNC">
@@ -195,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMI-yJ-Atn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="838"/>
+            <point key="canvasLocation" x="33" y="831"/>
         </scene>
         <!--Unique Name Registration View Controller-->
         <scene sceneID="Re4-Yg-kqd">
@@ -256,6 +257,6 @@
         <image name="logo_white" width="325" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TPP-ks-nD2"/>
+        <segue reference="gaR-Go-1Sc"/>
     </inferredMetricsTieBreakers>
 </document>
