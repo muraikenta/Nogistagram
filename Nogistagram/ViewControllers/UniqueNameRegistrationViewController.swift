@@ -16,7 +16,7 @@ class UniqueNameRegistrationViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var uniqueNameField: UITextField!
 
-    var userParams = [String: String]()
+    var userParams: [String: String] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +43,33 @@ class UniqueNameRegistrationViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func register(_ sender: UIButton) {
-        let uniqueName = uniqueNameField.text
-        userParams["unique_name"] = uniqueName!
+        userParams["unique_name"] = uniqueNameField.text!
         if (userParams["uid"] != nil) {
             // facebooklogin
+            Alamofire
+                .request("\(Constant.Api.root)/omniauth", method: .post, parameters: userParams)
+                .responseJSON { response in
+                    if response.response!.statusCode == 200 {
+                        print(response)
+//                        let headers = response.response!.allHeaderFields
+//                        let accessToken: String = headers["Access-Token"]! as! String
+//                        let uid: String = headers["Uid"]! as! String
+//                        let clientId: String = headers["Client"]! as! String
+
+                        // MEMO: うまくいってないかも。使うときに確かめる
+//                        let keychain = Keychain(service: "com.nogistagram")
+//                        keychain["accessToken"] = accessToken
+//                        keychain["uid"] = uid
+//                        keychain["clientId"] = clientId
+
+                        // TODO: 画面遷移
+                    } else {
+                        print("ERROR!!!!")
+                    }
+                }
         } else {
             Alamofire
-                .request("http://localhost:3002/api/auth", method: .post, parameters: userParams)
+                .request("\(Constant.Api.root)/auth", method: .post, parameters: userParams)
                 .responseJSON { response in
                     if response.response!.statusCode == 200 {
                         let headers = response.response!.allHeaderFields

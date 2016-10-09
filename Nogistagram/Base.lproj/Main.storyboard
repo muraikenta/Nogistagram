@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEe-6U-Yu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="90"/>
+            <point key="canvasLocation" x="945" y="137"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TLj-li-UNC">
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CMI-yJ-Atn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="803"/>
+            <point key="canvasLocation" x="137" y="838"/>
         </scene>
         <!--Unique Name Registration View Controller-->
         <scene sceneID="Re4-Yg-kqd">
@@ -249,13 +249,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogG-TL-cno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="803"/>
+            <point key="canvasLocation" x="945" y="838"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo_white" width="325" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="prI-iO-unW"/>
+        <segue reference="TPP-ks-nD2"/>
     </inferredMetricsTieBreakers>
 </document>
