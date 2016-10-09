@@ -57,17 +57,30 @@ class UniqueNameRegistrationViewController: UIViewController {
                         let uid: String = headers["Uid"]! as! String
                         let clientId: String = headers["Client"]! as! String
 
-                        // MEMO: うまくいってないかも。使うときに確かめる
-                        let keychain = Keychain(service: "com.nogistagram")
-                        keychain["accessToken"] = accessToken
-                        keychain["uid"] = uid
-                        keychain["clientId"] = clientId
+                        let keychain = Keychain(service: "com.example.Nogistagram")
+                        do {
+                            try keychain.set(accessToken, key: "accessToken")
+                            try keychain.set(uid, key: "uid")
+                            try keychain.set(clientId, key: "clientId")
+                        }
+                        catch let error {
+                            print(error)
+                        }
+                        // keychain["accessToken"] = accessToken
+                        // keychain["uid"] = uid
+                        // keychain["clientId"] = clientId
 
                         // TODO: 画面遷移
                     } else {
                         print("ERROR!!!!")
                     }
                 }
+            let keychain = Keychain(service: "com.example.Nogistagram")
+            if let uid = try? keychain.get("uid") {
+                print(uid)
+            } else {
+                print("error!!")
+            }
         }
     }
 
