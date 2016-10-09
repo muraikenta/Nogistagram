@@ -13,4 +13,8 @@ struct Constant {
         static let host = "http://localhost:3002"
         static let root = Constant.Api.host + "/api"
     }
+    
+    struct Keychain {
+        static let service = "com.example.Nogistagram"
+    }
 }
