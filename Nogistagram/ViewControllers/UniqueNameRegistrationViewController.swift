@@ -48,42 +48,51 @@ class UniqueNameRegistrationViewController: UIViewController {
             // facebooklogin
             Alamofire
                 .request("\(Constant.Api.root)/omniauth", method: .post, parameters: userParams)
+                .validate(statusCode: 200..<300)
                 .responseJSON { response in
-                    if response.response!.statusCode == 200 {
-                        print(response)
-//                        let headers = response.response!.allHeaderFields
-//                        let accessToken: String = headers["Access-Token"]! as! String
-//                        let uid: String = headers["Uid"]! as! String
-//                        let clientId: String = headers["Client"]! as! String
-
-                        // MEMO: うまくいってないかも。使うときに確かめる
-//                        let keychain = Keychain(service: "com.nogistagram")
-//                        keychain["accessToken"] = accessToken
-//                        keychain["uid"] = uid
-//                        keychain["clientId"] = clientId
-
-                        // TODO: 画面遷移
-                    } else {
-                        print("ERROR!!!!")
-                    }
-                }
-        } else {
-            Alamofire
-                .request("\(Constant.Api.root)/auth", method: .post, parameters: userParams)
-                .responseJSON { response in
-                    if response.response!.statusCode == 200 {
+                    switch response.result {
+                    case .success(let value):
                         let headers = response.response!.allHeaderFields
                         let accessToken: String = headers["Access-Token"]! as! String
                         let uid: String = headers["Uid"]! as! String
                         let clientId: String = headers["Client"]! as! String
 
-                        let keychain = Keychain(service: "com.example.Nogistagram")
+                        let keychain = Keychain(service: Constant.Keychain.service)
+
+                        // TODO: sessionモデルにユーザー情報保存
                         do {
                             try keychain.set(accessToken, key: "accessToken")
                             try keychain.set(uid, key: "uid")
                             try keychain.set(clientId, key: "clientId")
+                            
+                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                            self.present(tabBarController, animated: true, completion: nil)
+                        } catch let error {
+                            print(error)
                         }
-                        catch let error {
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+        } else {
+            Alamofire
+                .request("\(Constant.Api.root)/auth", method: .post, parameters: userParams)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        let headers = response.response!.allHeaderFields
+                        let accessToken: String = headers["Access-Token"]! as! String
+                        let uid: String = headers["Uid"]! as! String
+                        let clientId: String = headers["Client"]! as! String
+
+                        let keychain = Keychain(service: Constant.Keychain.service)
+                        do {
+                            try keychain.set(accessToken, key: "accessToken")
+                            try keychain.set(uid, key: "uid")
+                            try keychain.set(clientId, key: "clientId")
+                        } catch let error {
                             print(error)
                         }
                         // keychain["accessToken"] = accessToken
@@ -91,8 +100,8 @@ class UniqueNameRegistrationViewController: UIViewController {
                         // keychain["clientId"] = clientId
 
                         // TODO: 画面遷移
-                    } else {
-                        print("ERROR!!!!")
+                    case .failure(let error):
+                        print(error)
                     }
                 }
             let keychain = Keychain(service: "com.example.Nogistagram")
