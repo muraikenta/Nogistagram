@@ -28,6 +28,6 @@ class RegistrationViewModel {
     // TODO: こんなの使って次へボタンが押されたときにエラーメッセージ出す
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        return Regexp(emailRegEx).isMatch(input: email)
+        return Regexp(emailRegEx).isMatch(email)
     }
 }

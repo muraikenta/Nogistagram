@@ -22,14 +22,14 @@ class Regexp {
         }
     }
     
-    func isMatch(input: String) -> Bool {
+    func isMatch(_ input: String) -> Bool {
         let nsString = input as NSString
         let matches = self.internalRegexp.matches(in: input, options:[], range:NSMakeRange(0, nsString.length))
         return matches.count > 0
     }
     
     func matches(input: String) -> [String]? {
-        if self.isMatch(input: input) {
+        if self.isMatch(input) {
             let nsString = input as NSString
             let matches = self.internalRegexp.matches(in: input, options: [], range:NSMakeRange(0, nsString.length) )
             var results: [String] = []
