@@ -9,6 +9,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Alamofire
+import SwiftyJSON
+import KeychainAccess
 
 class LoginViewController: UIViewController, FacebookLoginable {
 
@@ -42,22 +45,6 @@ class LoginViewController: UIViewController, FacebookLoginable {
     
     func graphRequestDidComplete(userParams: [String: String]) {
         self.userParams = userParams
-    }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let destinationController: UIViewController = segue.destination
-        switch segue.identifier! {
-        case "toUniqueNameRegistration":
-            let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
-            uniqueNameRegistrationViewController.userParams = sender as! [String : String]
-        default:
-            break
-        }
     }
     
     private func addBindings() {
@@ -94,5 +81,63 @@ class LoginViewController: UIViewController, FacebookLoginable {
             .bindTo(loginButton.rx.enabled)
             .addDisposableTo(disposeBag)
     }
+
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let destinationController: UIViewController = segue.destination
+        switch segue.identifier! {
+        case "toUniqueNameRegistration":
+            let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
+            uniqueNameRegistrationViewController.userParams = sender as! [String : String]
+        default:
+            break
+        }
+    }
+    
+    @IBAction func login(_ sender: UIButton) {
+        let name = nameField.text!
+        let password = passwordField.text!
+        // 本物はunique_nameでもemailでもログインできるがとりあえずemailだけ
+        userParams["email"] = name
+        userParams["password"] = password
+        Alamofire
+            .request("\(Constant.Api.root)/auth/sign_in", method: .post, parameters: userParams)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let headers = response.response!.allHeaderFields
+                    let accessToken: String = headers["Access-Token"]! as! String
+                    let uid: String = headers["Uid"]! as! String
+                    let clientId: String = headers["Client"]! as! String
+                    
+                    let keychain = Keychain(service: Constant.Keychain.service)
+                    do {
+                        try keychain.set(accessToken, key: "accessToken")
+                        try keychain.set(uid, key: "uid")
+                        try keychain.set(clientId, key: "clientId")
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                        self.present(tabBarController, animated: true, completion: nil)
+                    } catch let error {
+                        print(error)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+        }
+        let keychain = Keychain(service: "com.example.Nogistagram")
+        if let uid = try? keychain.get("uid") {
+            print(uid)
+        } else {
+            print("error!!")
+        }
+
+    }
+    
 
 }
