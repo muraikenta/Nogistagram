@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController, FacebookLoginable {
 
+    // MARK: Properties
     var userParams: [String: String] = [:]
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    private let viewModel = LoginViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addBindings()
         addFacebookLoginButton()
     }
     
@@ -47,6 +58,41 @@ class LoginViewController: UIViewController, FacebookLoginable {
         default:
             break
         }
+    }
+    
+    private func addBindings() {
+        // name
+        // UITextField -> ViewModel
+        nameField.rx.textInput.text
+            .bindTo(viewModel.name)
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UITextField
+        viewModel.name.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bindTo(nameField.rx.textInput.text)
+            .addDisposableTo(disposeBag)
+        
+        // password
+        // UITextField -> ViewModel
+        passwordField.rx.textInput.text
+            .bindTo(viewModel.password)
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UITextField
+        viewModel.password.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bindTo(passwordField.rx.textInput.text)
+            .addDisposableTo(disposeBag)
+        
+        // UIButtonのタップイベント
+        loginButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.login()
+            })
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UIButtonのenabled
+        viewModel.enableLoginButton
+            .bindTo(loginButton.rx.enabled)
+            .addDisposableTo(disposeBag)
     }
 
 }

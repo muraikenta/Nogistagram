@@ -192,6 +192,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="6y2-4n-B0V" id="PKN-ZC-REH"/>
+                        <outlet property="nameField" destination="WUZ-ZI-wA0" id="Sdc-mz-wxa"/>
+                        <outlet property="passwordField" destination="3GA-RV-04L" id="SyN-Gb-z0f"/>
                         <segue destination="HiA-U7-LtG" kind="show" identifier="toUniqueNameRegistration" id="prI-iO-unW"/>
                     </connections>
                 </viewController>
