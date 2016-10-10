@@ -21,6 +21,8 @@
 		2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */; };
 		24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B921DA9EA5800AFA159 /* Constant.swift */; };
 		24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E26B941DAA0D6A00AFA159 /* Main.storyboard */; };
+		24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */; };
+		24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */; };
 		FC0966751DA272D400433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC0966741DA272D400433A4C /* .keep */; };
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
@@ -55,6 +57,8 @@
 		2491A8881DA10DA500C552EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E26B921DA9EA5800AFA159 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		24E26B941DAA0D6A00AFA159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginable.swift; sourceTree = "<group>"; };
+		24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		FC0966741DA272D400433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3582181DAA1E3000F7983E /* Helpers */,
+				24E26B961DAA1C2400AFA159 /* Protocols */,
 				FC0966761DA2745900433A4C /* Models */,
 				FC0966771DA2746000433A4C /* ViewControllers */,
 				FC0966781DA274A700433A4C /* ViewModels */,
@@ -150,6 +155,14 @@
 				FC5038F41DA9FDBC00D5BC81 /* Nogistagram.entitlements */,
 			);
 			path = Nogistagram;
+			sourceTree = "<group>";
+		};
+		24E26B961DAA1C2400AFA159 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		FC0966731DA26CD900433A4C /* Views */ = {
@@ -176,6 +189,7 @@
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
+				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -315,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
 				24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */,
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
+				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,

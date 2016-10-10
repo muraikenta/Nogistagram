@@ -10,9 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, FacebookLoginable {
 
     // MARK: Properties
+    var userParams: [String: String] = [:]
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
 
@@ -24,25 +26,35 @@ class RegistrationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         addBindings()
+        addFacebookLoginButton()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tryToSignIn(userParams: userParams)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func graphRequestDidComplete(userParams: [String: String]) {
+        self.userParams = userParams
+    }
 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         let destinationController: UIViewController = segue.destination
         switch segue.identifier! {
+        case "toUniqueNameRegistration":
+            let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
+            uniqueNameRegistrationViewController.userParams = sender as! [String : String]
         case "toAccountRegistration":
             let email = emailField.text
-            let userParams: [String: String] = ["email": email!]
+            userParams = ["email": email!]
             let accountRegistrationViewController = destinationController as! AccountRegistrationViewController
             accountRegistrationViewController.userParams = userParams
         default:
