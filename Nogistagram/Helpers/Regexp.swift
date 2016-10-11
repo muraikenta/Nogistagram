@@ -28,7 +28,7 @@ class Regexp {
         return matches.count > 0
     }
     
-    func matches(input: String) -> [String]? {
+    func matches(_ input: String) -> [String]? {
         if self.isMatch(input) {
             let nsString = input as NSString
             let matches = self.internalRegexp.matches(in: input, options: [], range:NSMakeRange(0, nsString.length) )
