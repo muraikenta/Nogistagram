@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Alamofire
+import SwiftyJSON
+import KeychainAccess
 
 class LoginViewController: UIViewController, FacebookLoginable {
 
+    // MARK: Properties
     var userParams: [String: String] = [:]
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    private let viewModel = LoginViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addBindings()
         addFacebookLoginButton()
     }
     
@@ -32,6 +46,41 @@ class LoginViewController: UIViewController, FacebookLoginable {
     func graphRequestDidComplete(userParams: [String: String]) {
         self.userParams = userParams
     }
+    
+    private func addBindings() {
+        // name
+        // UITextField -> ViewModel
+        nameField.rx.textInput.text
+            .bindTo(viewModel.name)
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UITextField
+        viewModel.name.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bindTo(nameField.rx.textInput.text)
+            .addDisposableTo(disposeBag)
+        
+        // password
+        // UITextField -> ViewModel
+        passwordField.rx.textInput.text
+            .bindTo(viewModel.password)
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UITextField
+        viewModel.password.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bindTo(passwordField.rx.textInput.text)
+            .addDisposableTo(disposeBag)
+        
+        // UIButtonのタップイベント
+        loginButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.login()
+            })
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UIButtonのenabled
+        viewModel.enableLoginButton
+            .bindTo(loginButton.rx.enabled)
+            .addDisposableTo(disposeBag)
+    }
 
     // MARK: - Navigation
 
@@ -48,5 +97,47 @@ class LoginViewController: UIViewController, FacebookLoginable {
             break
         }
     }
+    
+    @IBAction func login(_ sender: UIButton) {
+        let name = nameField.text!
+        let password = passwordField.text!
+        // 本物はunique_nameでもemailでもログインできるがとりあえずemailだけ
+        userParams["email"] = name
+        userParams["password"] = password
+        Alamofire
+            .request("\(Constant.Api.root)/auth/sign_in", method: .post, parameters: userParams)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let headers = response.response!.allHeaderFields
+                    let accessToken: String = headers["Access-Token"]! as! String
+                    let uid: String = headers["Uid"]! as! String
+                    let clientId: String = headers["Client"]! as! String
+                    
+                    let keychain = Keychain(service: Constant.Keychain.service)
+                    do {
+                        try keychain.set(accessToken, key: "accessToken")
+                        try keychain.set(uid, key: "uid")
+                        try keychain.set(clientId, key: "clientId")
+                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                        self.present(tabBarController, animated: true, completion: nil)
+                    } catch let error {
+                        print(error)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+        }
+        let keychain = Keychain(service: "com.example.Nogistagram")
+        if let uid = try? keychain.get("uid") {
+            print(uid)
+        } else {
+            print("error!!")
+        }
+
+    }
+    
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="U97-Fp-Sye" id="tV5-05-VdV"/>
+                        <outlet property="nextButton" destination="kvH-ph-xPx" id="wru-Aq-6sp"/>
                         <segue destination="HiA-U7-LtG" kind="show" identifier="toUniqueNameRegistration" id="gaR-Go-1Sc"/>
                     </connections>
                 </viewController>
@@ -170,6 +171,9 @@
                                 <state key="normal" title="ログイン">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="WSG-hF-x8M" eventType="touchUpInside" id="ozS-hp-czP"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="9eZ-LO-mTy">
                                 <constraints>
@@ -191,6 +195,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="6y2-4n-B0V" id="PKN-ZC-REH"/>
+                        <outlet property="nameField" destination="WUZ-ZI-wA0" id="Sdc-mz-wxa"/>
+                        <outlet property="passwordField" destination="3GA-RV-04L" id="SyN-Gb-z0f"/>
                         <segue destination="HiA-U7-LtG" kind="show" identifier="toUniqueNameRegistration" id="prI-iO-unW"/>
                     </connections>
                 </viewController>

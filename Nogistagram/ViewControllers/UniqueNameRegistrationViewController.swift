@@ -91,14 +91,12 @@ class UniqueNameRegistrationViewController: UIViewController {
                             try keychain.set(accessToken, key: "accessToken")
                             try keychain.set(uid, key: "uid")
                             try keychain.set(clientId, key: "clientId")
+                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                            self.present(tabBarController, animated: true, completion: nil)
                         } catch let error {
                             print(error)
                         }
-                        // keychain["accessToken"] = accessToken
-                        // keychain["uid"] = uid
-                        // keychain["clientId"] = clientId
-
-                        // TODO: 画面遷移
                     case .failure(let error):
                         print(error)
                     }

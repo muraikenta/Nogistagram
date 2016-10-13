@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class RegistrationViewController: UIViewController, FacebookLoginable {
 
@@ -14,10 +16,16 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
     var userParams: [String: String] = [:]
     
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+
+    private let viewModel = RegistrationViewModel()
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
+        addBindings()
         addFacebookLoginButton()
     }
 
@@ -53,6 +61,30 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
             break
         }
 
+    }
+    
+    private func addBindings() {
+        // email
+        // UITextField -> ViewModel
+        emailField.rx.textInput.text
+            .bindTo(viewModel.email)
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UITextField
+        viewModel.email.asObservable()
+            .observeOn(MainScheduler.instance)
+            .bindTo(emailField.rx.textInput.text)
+            .addDisposableTo(disposeBag)
+        
+        // UIButtonのタップイベント
+        nextButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.goToNext()
+            })
+            .addDisposableTo(disposeBag)
+        // ViewModel -> UIButtonのenabled
+        viewModel.enableGoToNextButton
+            .bindTo(nextButton.rx.enabled)
+            .addDisposableTo(disposeBag)
     }
 
 }

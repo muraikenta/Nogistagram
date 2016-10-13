@@ -27,6 +27,11 @@
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
+		FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582191DAA1E6900F7983E /* Regexp.swift */; };
+		FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */; };
+		FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821D1DAA358B00F7983E /* RxSwift.framework */; };
+		FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821F1DAA368800F7983E /* RxCocoa.framework */; };
+		FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582211DAB82F200F7983E /* LoginViewModel.swift */; };
 		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */; };
@@ -59,6 +64,11 @@
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC3582191DAA1E6900F7983E /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
+		FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		FC35821D1DAA358B00F7983E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		FC35821F1DAA368800F7983E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		FC3582211DAB82F200F7983E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
@@ -74,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */,
+				FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */,
 				FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */,
 				FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */,
 				242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */,
@@ -94,6 +106,8 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC35821F1DAA368800F7983E /* RxCocoa.framework */,
+				FC35821D1DAA358B00F7983E /* RxSwift.framework */,
 				FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */,
 				FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */,
 				242FC0961DA66698008B23AB /* SnapKit.framework */,
@@ -127,6 +141,7 @@
 		2491A87B1DA10DA500C552EB /* Nogistagram */ = {
 			isa = PBXGroup;
 			children = (
+				FC3582181DAA1E3000F7983E /* Helpers */,
 				24E26B961DAA1C2400AFA159 /* Protocols */,
 				FC0966761DA2745900433A4C /* Models */,
 				FC0966771DA2746000433A4C /* ViewControllers */,
@@ -134,12 +149,12 @@
 				FC0966731DA26CD900433A4C /* Views */,
 				2491A87C1DA10DA500C552EB /* AppDelegate.swift */,
 				2491A8831DA10DA500C552EB /* Assets.xcassets */,
+				24E26B921DA9EA5800AFA159 /* Constant.swift */,
 				2491A8881DA10DA500C552EB /* Info.plist */,
 				2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */,
 				2491A8801DA10DA500C552EB /* Login.storyboard */,
-				24E26B921DA9EA5800AFA159 /* Constant.swift */,
-				FC5038F41DA9FDBC00D5BC81 /* Nogistagram.entitlements */,
 				24E26B941DAA0D6A00AFA159 /* Main.storyboard */,
+				FC5038F41DA9FDBC00D5BC81 /* Nogistagram.entitlements */,
 			);
 			path = Nogistagram;
 			sourceTree = "<group>";
@@ -184,9 +199,19 @@
 		FC0966781DA274A700433A4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */,
 				FC09667D1DA2754F00433A4C /* .keep */,
+				FC3582211DAB82F200F7983E /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC3582181DAA1E3000F7983E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC3582191DAA1E6900F7983E /* Regexp.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FC5A71CD1DA65EEE00F58C4A /* Frameworks */ = {
@@ -291,6 +316,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputPaths = (
 			);
@@ -307,10 +334,13 @@
 			files = (
 				24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
+				FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */,
+				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
 				24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */,
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
+				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */,
 			);
