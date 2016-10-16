@@ -34,6 +34,7 @@
 		FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821D1DAA358B00F7983E /* RxSwift.framework */; };
 		FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821F1DAA368800F7983E /* RxCocoa.framework */; };
 		FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582211DAB82F200F7983E /* LoginViewModel.swift */; };
+		FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */; };
 		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */; };
@@ -73,6 +74,7 @@
 		FC35821D1DAA358B00F7983E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		FC35821F1DAA368800F7983E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FC3582211DAB82F200F7983E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
+				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26B9C1DAFAB2400AFA159 /* NewPhotoViewController.swift in Sources */,
