@@ -148,8 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				FC3582181DAA1E3000F7983E /* Helpers */,
-				24E26B961DAA1C2400AFA159 /* Protocols */,
 				FC0966761DA2745900433A4C /* Models */,
+				24E26B961DAA1C2400AFA159 /* Protocols */,
 				FC0966771DA2746000433A4C /* ViewControllers */,
 				FC0966781DA274A700433A4C /* ViewModels */,
 				FC0966731DA26CD900433A4C /* Views */,
@@ -170,7 +170,7 @@
 			children = (
 				24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */,
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FC0966731DA26CD900433A4C /* Views */ = {
@@ -194,11 +194,12 @@
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
+				FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
-				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
-				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
-				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				24E26B9B1DAFAB2400AFA159 /* NewPhotoViewController.swift */,
+				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
+				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
+				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,9 +207,9 @@
 		FC0966781DA274A700433A4C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */,
 				FC09667D1DA2754F00433A4C /* .keep */,
 				FC3582211DAB82F200F7983E /* LoginViewModel.swift */,
+				FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
