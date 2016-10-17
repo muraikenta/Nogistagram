@@ -15,8 +15,8 @@ class NewPostDetailViewController: UIViewController {
     
     override func loadView() {
         if let view = UINib(nibName: "NewPostDetailViewController", bundle: Bundle(for: self.classForCoder)).instantiate(withOwner: self, options: nil).first as? UIView {
-            
             self.view = view
+            self.imageView.image = image
         }
     }
 
