@@ -49,6 +49,9 @@
 		FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821D1DAA358B00F7983E /* RxSwift.framework */; };
 		FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821F1DAA368800F7983E /* RxCocoa.framework */; };
 		FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582211DAB82F200F7983E /* LoginViewModel.swift */; };
+		FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */; };
+		FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1D1DB37B4F00A1D17A /* Realm.framework */; };
+		FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */; };
 		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */; };
@@ -56,6 +59,7 @@
 		FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */; };
 		FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */; };
 		FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */; };
+		FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +107,9 @@
 		FC35821D1DAA358B00F7983E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		FC35821F1DAA368800F7983E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FC3582211DAB82F200F7983E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		FC442D1D1DB37B4F00A1D17A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
@@ -111,6 +118,7 @@
 		FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */,
+				FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */,
 				FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */,
 				FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */,
 				FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */,
@@ -140,6 +150,8 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC442D1D1DB37B4F00A1D17A /* Realm.framework */,
+				FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */,
 				FC35821F1DAA368800F7983E /* RxCocoa.framework */,
 				FC35821D1DAA358B00F7983E /* RxSwift.framework */,
 				FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */,
@@ -261,6 +273,7 @@
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
+				FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				24E26B9B1DAFAB2400AFA159 /* NewPhotoViewController.swift */,
 				24E26B9F1DB0E9E500AFA159 /* NewPostDetailViewController.swift */,
@@ -285,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3582191DAA1E6900F7983E /* Regexp.swift */,
+				FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -400,6 +414,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -439,6 +455,8 @@
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
+				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
+				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,
