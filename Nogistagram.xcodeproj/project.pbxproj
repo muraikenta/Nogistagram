@@ -310,6 +310,7 @@
 				2491A8761DA10DA500C552EB /* Frameworks */,
 				2491A8771DA10DA500C552EB /* Resources */,
 				242FC08F1DA64FA0008B23AB /* ShellScript */,
+				24C97B3E1DB4DA5D001488A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -405,6 +406,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\ncodesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"";
+		};
+		24C97B3E1DB4DA5D001488A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
