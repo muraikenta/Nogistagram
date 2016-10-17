@@ -16,12 +16,12 @@ class SessionHelper {
             let uid: String = try keychain.get("uid")!
             let client: String = try keychain.get("clientId")!
             let accessToken: String = try keychain.get("accessToken")!
-            let authToken: [String: String] = [
+            let authDict: [String: String] = [
                 "Access-Token": accessToken,
                 "Uid": uid,
                 "Client": client,
                 ]
-            return authToken
+            return authDict
         } catch let error {
             print(error)
             return nil
