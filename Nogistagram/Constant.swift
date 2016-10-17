@@ -15,6 +15,6 @@ struct Constant {
     }
     
     struct Keychain {
-        static let service = "com.example.Nogistagram"
+        static let service: String = Bundle.main.bundleIdentifier!
     }
 }

@@ -53,10 +53,15 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
             let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
             uniqueNameRegistrationViewController.userParams = sender as! [String : String]
         case "toAccountRegistration":
-            let email = emailField.text
-            userParams = ["email": email!]
-            let accountRegistrationViewController = destinationController as! AccountRegistrationViewController
-            accountRegistrationViewController.userParams = userParams
+            let email: String = emailField.text!
+            if self.isValidEmail(email) {
+                userParams = ["email": email]
+                let accountRegistrationViewController = destinationController as! AccountRegistrationViewController
+                accountRegistrationViewController.userParams = userParams
+            } else {
+                // TODO: UIに反映
+                print("有効なメールアドレスを入力してください")
+            }
         default:
             break
         }
@@ -85,6 +90,12 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
         viewModel.enableGoToNextButton
             .bindTo(nextButton.rx.enabled)
             .addDisposableTo(disposeBag)
+    }
+    
+    // TODO: ViewModelに移す？
+    private func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        return Regexp(emailRegEx).isMatch(email)
     }
 
 }
