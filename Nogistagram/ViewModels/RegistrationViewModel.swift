@@ -15,7 +15,7 @@ class RegistrationViewModel {
     let enableGoToNextButton: Observable<Bool>
     
     init() {
-        enableGoToNextButton = email.asObservable().map{
+        enableGoToNextButton = email.asObservable().map {
             $0.characters.count > 0
         }
     }

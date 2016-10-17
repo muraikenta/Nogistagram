@@ -265,7 +265,7 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
 
                 for device in AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) {
 
-                    if let device = device as? AVCaptureDevice , device.position == position {
+                    if let device = device as? AVCaptureDevice, device.position == position {
                  
                         videoInput = try AVCaptureDeviceInput(device: device)
                         session.addInput(videoInput)
