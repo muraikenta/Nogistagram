@@ -22,6 +22,13 @@ class CustomFusumaViewController: FusumaViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction override func closeButtonPressed(_ sender: UIButton) {
+        if let tabBarController = UIApplication.shared.delegate?.window??.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 0
+        }
+        super.closeButtonPressed(sender)
+    }
+    
     @IBAction override func doneButtonPressed(_ sender: UIButton) {
         let view = albumView.imageCropView
         
