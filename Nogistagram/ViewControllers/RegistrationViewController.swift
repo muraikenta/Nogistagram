@@ -53,9 +53,9 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
             let uniqueNameRegistrationViewController = destinationController as! UniqueNameRegistrationViewController
             uniqueNameRegistrationViewController.userParams = sender as! [String : String]
         case "toAccountRegistration":
-            let email = emailField.text
-            if self.isValidEmail(email!) {
-                userParams = ["email": email!]
+            let email: String = emailField.text!
+            if self.isValidEmail(email) {
+                userParams = ["email": email]
                 let accountRegistrationViewController = destinationController as! AccountRegistrationViewController
                 accountRegistrationViewController.userParams = userParams
             } else {

@@ -28,32 +28,21 @@ class HomeTableViewController: UITableViewController {
     
     func loadPosts() {
         print("load posts!!")
-        let keychain = Keychain(service: "com.example.Nogistagram")
-        do {
-            let uid: String = try keychain.get("uid")!
-            let client: String = try keychain.get("clientId")!
-            let accessToken: String = try keychain.get("accessToken")!
-            let authToken: [String: String] = [
-                "Access-Token": accessToken,
-                "Uid": uid,
-                "Client": client,
-            ]
+        if let authToken = SessionHelper.authDict() {
             Alamofire
                 .request("\(Constant.Api.root)/posts", method: .get, headers: authToken)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result{
                     case .success(let value):
-                        print("@@@@@@@@")
                         print(value)
-                        print("@@@@@@@@")
                     case .failure(let error):
                         print(error)
                     }
                     
-                }
-        } catch let error {
-            print(error)
+            }
+        } else {
+            print("Error: authToken is nil")
         }
     }
 
