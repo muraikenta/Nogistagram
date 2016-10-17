@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5D1193DD3F1269F102F666D597B85CE57A93CB6A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5D1193DD3F1269F102F666D597B85CE57A93CB6A" : 9223372036854775807,
+    "BD7E742BD9060BB72B5CF8D2D51CC11BFD8E9F20" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E9959377-AFCF-466B-A908-45CBF320B351",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5D1193DD3F1269F102F666D597B85CE57A93CB6A" : "Nogistagram\/",
+    "BD7E742BD9060BB72B5CF8D2D51CC11BFD8E9F20" : "Fusuma\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Nogistagram",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Nogistagram.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:muraikenta\/Nogistagram.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D1193DD3F1269F102F666D597B85CE57A93CB6A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ytakzk\/Fusuma.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD7E742BD9060BB72B5CF8D2D51CC11BFD8E9F20"
+    }
+  ]
+}
