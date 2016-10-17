@@ -7,24 +7,9 @@
 //
 
 import UIKit
-import Fusuma
-
-extension FusumaViewController {
-    @IBAction func closeButtonPressed(_ sender: UIButton) {
-        if let tabBarController = UIApplication.shared.delegate?.window??.rootViewController as? UITabBarController {
-            tabBarController.selectedIndex = 0
-        }
-        self.dismiss(animated: true, completion: {
-            self.delegate?.fusumaClosed?()
-        })
-    }
-    
-    @IBAction func doneButtonPressed(_ sender: UIButton) {
-        print("next!!!!!!!!!!!!")
-    }
-}
 
 class NewPhotoViewController: UIViewController, FusumaDelegate {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

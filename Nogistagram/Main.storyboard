@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXY-lS-aPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="466" y="832"/>
+            <point key="canvasLocation" x="462" y="857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbU-oo-LhF">
@@ -149,7 +149,6 @@
         <!--New Photo View Controller-->
         <scene sceneID="QNN-Nl-zIZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dCw-8I-ZUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bXk-1R-IBe" customClass="NewPhotoViewController" customModule="Nogistagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0WT-yz-c86"/>
@@ -162,8 +161,27 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="G4P-9M-4NK"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCw-8I-ZUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="462" y="171"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dQz-Ux-jRW">
+            <objects>
+                <viewController id="GaZ-Gm-7fs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XDI-cX-1CZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dor-cj-IrB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xQ-5A-diT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmf-45-kyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1450" y="171"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FNb-lt-Yyn">
