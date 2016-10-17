@@ -22,7 +22,7 @@ class NewPhotoViewController: UIViewController, FusumaDelegate {
         fusumaTintColor = UIColor.black
         fusumaBackgroundColor = UIColor.white
         
-        let fusuma = FusumaViewController()
+        let fusuma = CustomFusumaViewController()
         fusuma.delegate = self
         fusuma.hasVideo = false
         self.present(fusuma, animated: true, completion: nil)
