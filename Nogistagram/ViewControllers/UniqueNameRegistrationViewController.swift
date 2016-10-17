@@ -101,12 +101,6 @@ class UniqueNameRegistrationViewController: UIViewController {
                         print(error)
                     }
                 }
-            let keychain = Keychain(service: "com.example.Nogistagram")
-            if let uid = try? keychain.get("uid") {
-                print(uid)
-            } else {
-                print("error!!")
-            }
         }
     }
 
