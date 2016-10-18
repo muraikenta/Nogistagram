@@ -63,9 +63,6 @@ class CustomFusumaViewController: FusumaViewController {
                         let controller = NewPostDetailViewController()
                         controller.image = result!
                         self.present(controller, animated: false, completion: nil)
-//                        self.dismiss(animated: true, completion: {
-//                            self.delegate?.fusumaDismissedWithImage?(result!)
-//                        })
                     })
                 }
             })

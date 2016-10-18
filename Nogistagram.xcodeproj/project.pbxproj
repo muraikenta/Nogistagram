@@ -10,7 +10,7 @@
 		242FC08A1DA64D8D008B23AB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0871DA64D8D008B23AB /* Bolts.framework */; };
 		242FC08B1DA64D8D008B23AB /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0881DA64D8D008B23AB /* FacebookCore.framework */; };
 		242FC08C1DA64D8D008B23AB /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0891DA64D8D008B23AB /* FacebookLogin.framework */; };
-		242FC08E1DA64F8E008B23AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC08D1DA64F8E008B23AB /* FBSDKCoreKit.framework */; };
+		242FC08E1DA64F8E008B23AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC08D1DA64F8E008B23AB /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		242FC0911DA65071008B23AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0901DA65071008B23AB /* FBSDKLoginKit.framework */; };
 		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
 		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
@@ -32,6 +32,9 @@
 		24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B3A1DB10499001488A2 /* FusumaViewController.swift */; };
 		24C97B3D1DB1049A001488A2 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B3B1DB10499001488A2 /* FusumaViewController.xib */; };
 		24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */; };
+		24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */; };
+		24C97B441DB64FAA001488A2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B431DB64FAA001488A2 /* Post.swift */; };
+		24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C97B451DB659DC001488A2 /* Kingfisher.framework */; };
 		24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B921DA9EA5800AFA159 /* Constant.swift */; };
 		24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E26B941DAA0D6A00AFA159 /* Main.storyboard */; };
 		24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */; };
@@ -91,6 +94,9 @@
 		24C97B3A1DB10499001488A2 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		24C97B3B1DB10499001488A2 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
 		24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFusumaViewController.swift; sourceTree = "<group>"; };
+		24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		24C97B431DB64FAA001488A2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		24C97B451DB659DC001488A2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		24E26B921DA9EA5800AFA159 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		24E26B941DAA0D6A00AFA159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginable.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */,
 				FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */,
 				FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */,
 				FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */,
@@ -152,6 +159,7 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24C97B451DB659DC001488A2 /* Kingfisher.framework */,
 				FC442D1D1DB37B4F00A1D17A /* Realm.framework */,
 				FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */,
 				FC35821F1DAA368800F7983E /* RxCocoa.framework */,
@@ -258,6 +266,7 @@
 			children = (
 				FC0966741DA272D400433A4C /* .keep */,
 				24E26BA01DB0E9E500AFA159 /* NewPostDetailViewController.xib */,
+				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				242FC0941DA65337008B23AB /* .keep */,
+				24C97B431DB64FAA001488A2 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,7 +337,6 @@
 				2491A8761DA10DA500C552EB /* Frameworks */,
 				2491A8771DA10DA500C552EB /* Resources */,
 				242FC08F1DA64FA0008B23AB /* ShellScript */,
-				24C97B3E1DB4DA5D001488A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -419,25 +428,13 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\ncodesign --verify --force --sign \"$CODE_SIGN_IDENTITY\" \"$CODESIGNING_FOLDER_PATH\"";
-		};
-		24C97B3E1DB4DA5D001488A2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -461,6 +458,7 @@
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
+				24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,
@@ -469,6 +467,7 @@
 				24C97B321DB103E2001488A2 /* FSCameraView.swift in Sources */,
 				24E26B9C1DAFAB2400AFA159 /* NewPhotoViewController.swift in Sources */,
 				242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */,
+				24C97B441DB64FAA001488A2 /* Post.swift in Sources */,
 				24C97B341DB103E2001488A2 /* FSConstants.swift in Sources */,
 				24C97B301DB103E2001488A2 /* FSAlbumViewCell.swift in Sources */,
 			);
@@ -597,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = GQXC5M8H66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				DEVELOPMENT_TEAM = GQXC5M8H66;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
