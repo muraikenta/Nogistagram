@@ -8,4 +8,3 @@ github "facebook/facebook-sdk-swift"
 github "SnapKit/SnapKit" == 3.0.2
 github "kishikawakatsumi/KeychainAccess"
 github "ReactiveX/RxSwift" "3.0.0-beta.2"
-github "ytakzk/Fusuma"

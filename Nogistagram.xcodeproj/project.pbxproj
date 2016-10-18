@@ -31,6 +31,7 @@
 		24C97B371DB103E2001488A2 /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B2F1DB103E2001488A2 /* FSVideoCameraView.xib */; };
 		24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B3A1DB10499001488A2 /* FusumaViewController.swift */; };
 		24C97B3D1DB1049A001488A2 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B3B1DB10499001488A2 /* FusumaViewController.xib */; };
+		24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */; };
 		24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B921DA9EA5800AFA159 /* Constant.swift */; };
 		24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E26B941DAA0D6A00AFA159 /* Main.storyboard */; };
 		24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */; };
@@ -90,6 +91,7 @@
 		24C97B2F1DB103E2001488A2 /* FSVideoCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSVideoCameraView.xib; sourceTree = "<group>"; };
 		24C97B3A1DB10499001488A2 /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		24C97B3B1DB10499001488A2 /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
+		24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFusumaViewController.swift; sourceTree = "<group>"; };
 		24E26B921DA9EA5800AFA159 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		24E26B941DAA0D6A00AFA159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginable.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
+				24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
+				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,

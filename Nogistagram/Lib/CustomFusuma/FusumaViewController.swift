@@ -70,7 +70,10 @@ public enum FusumaModeOrder {
 }
 
 //@objc public class FusumaViewController: UIViewController, FSCameraViewDelegate, FSAlbumViewDelegate {
-public final class FusumaViewController: UIViewController {
+//public final class FusumaViewController: UIViewController {
+
+// MEMO: 継承するため、final外した
+public class FusumaViewController: UIViewController {
     
     enum Mode {
         case camera

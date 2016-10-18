@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
 class NewPostDetailViewController: UIViewController {
     
     var image = UIImage()
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textView: UITextView!
     
     override func loadView() {
         if let view = UINib(nibName: "NewPostDetailViewController", bundle: Bundle(for: self.classForCoder)).instantiate(withOwner: self, options: nil).first as? UIView {
-            
             self.view = view
+            self.imageView.image = image
         }
     }
 
@@ -29,6 +31,28 @@ class NewPostDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        let imageData: Data = UIImagePNGRepresentation(image)!
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(self.textView.text!.data(using: String.Encoding.utf8)!, withName: "body")
+                multipartFormData.append(imageData, withName: "image_binary")
+            },
+            to: "\(Constant.Api.root)/posts",
+            headers: SessionHelper.authDict(),
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        print(response)
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+            }
+        )
     }
     
     override public var prefersStatusBarHidden: Bool {
