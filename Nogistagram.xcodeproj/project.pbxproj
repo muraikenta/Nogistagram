@@ -59,6 +59,7 @@
 		FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */; };
 		FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */; };
 		FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */; };
+		FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF36B1DB4EE0100BBF3BA /* Session.swift */; };
 		FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		FC5CF36B1DB4EE0100BBF3BA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				242FC0941DA65337008B23AB /* .keep */,
+				FC5CF36B1DB4EE0100BBF3BA /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				24C97B351DB103E2001488A2 /* FSImageCropView.swift in Sources */,
 				24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */,
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
+				FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */,
 				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
