@@ -47,6 +47,10 @@ class NewPostDetailViewController: UIViewController {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
                         print(response)
+                        if let tabBarController = UIApplication.shared.delegate?.window??.rootViewController as? UITabBarController {
+                            tabBarController.selectedIndex = 0
+                            self.dismiss(animated: false, completion: nil)
+                        }
                     }
                 case .failure(let encodingError):
                     print(encodingError)
