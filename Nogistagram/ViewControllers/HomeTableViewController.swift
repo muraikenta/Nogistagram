@@ -9,9 +9,12 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import KeychainAccess
+import ObjectMapper
+import Kingfisher
 
 class HomeTableViewController: UITableViewController {
+    
+    var posts: [Post] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +30,20 @@ class HomeTableViewController: UITableViewController {
     }
     
     func loadPosts() {
-        print("load posts!!")
         if let authToken = SessionHelper.authDict() {
             Alamofire
                 .request("\(Constant.Api.root)/posts", method: .get, headers: authToken)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
-                    switch response.result{
+                    switch response.result {
                     case .success(let value):
-                        print(value)
+                        let postJsons = JSON(value)
+                        for (_, postJson) in postJsons {
+                            print(postJson)
+                            let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
+                            self.posts.append(post)
+                        }
+                        self.tableView.reloadData()
                     case .failure(let error):
                         print(error)
                     }
@@ -55,23 +63,21 @@ class HomeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
+        let post: Post = posts[indexPath.row]
+        cell.postImageView.kf.setImage(with: URL(string: post.imageUrl))
+        cell.postBodyTextView.text = post.body
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
