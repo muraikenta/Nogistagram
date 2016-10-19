@@ -277,8 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				242FC0941DA65337008B23AB /* .keep */,
-				FC5CF36B1DB4EE0100BBF3BA /* Session.swift */,
 				24C97B431DB64FAA001488A2 /* Post.swift */,
+				FC5CF36B1DB4EE0100BBF3BA /* Session.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +288,7 @@
 			children = (
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
+				24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */,
 				FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				24E26B9B1DAFAB2400AFA159 /* NewPhotoViewController.swift */,
@@ -295,7 +296,6 @@
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
-				24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
