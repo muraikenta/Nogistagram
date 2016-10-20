@@ -18,8 +18,7 @@ class HomeTableViewController: UITableViewController {
     var posts: [Post] = []
 
     override func viewDidLoad() {
-        let realm = try! Realm()
-        posts = Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
+        posts = Post.all()
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -48,8 +47,7 @@ class HomeTableViewController: UITableViewController {
                                 realm.add(post, update: true)
                             }
                         }
-                        let realm = try! Realm()
-                        self.posts = Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
+                        self.posts = Post.all()
                         self.tableView.reloadData()
                     case .failure(let error):
                         print(error)

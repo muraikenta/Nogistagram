@@ -38,4 +38,9 @@ class Post: Object, Mappable {
             createdAt = formatter.date(from: createdAtString)
         }
     }
+    
+    static func all() -> [Post] {
+        let realm = try! Realm()
+        return Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
+    }
 }
