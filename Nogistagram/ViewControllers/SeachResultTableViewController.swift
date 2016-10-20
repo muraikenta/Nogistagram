@@ -26,6 +26,8 @@ class SeachResultTableViewController: UITableViewController, IndicatorInfoProvid
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)
+        tableView.estimatedRowHeight = 60.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {

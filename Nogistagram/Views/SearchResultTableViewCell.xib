@@ -48,6 +48,7 @@
                     <constraint firstItem="ahG-e3-cgs" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hM6-hu-ulB"/>
                     <constraint firstItem="vbA-OC-vWI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jnO-oa-5cP"/>
                     <constraint firstItem="uSx-MY-6rb" firstAttribute="leading" secondItem="vbA-OC-vWI" secondAttribute="trailing" constant="8" id="kIz-1H-m2M"/>
+                    <constraint firstAttribute="bottom" secondItem="uSx-MY-6rb" secondAttribute="bottom" constant="7" id="rYT-J3-PJw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
