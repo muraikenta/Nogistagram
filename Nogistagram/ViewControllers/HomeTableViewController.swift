@@ -11,12 +11,15 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import Kingfisher
+import RealmSwift
 
 class HomeTableViewController: UITableViewController {
     
     var posts: [Post] = []
 
     override func viewDidLoad() {
+        let realm = try! Realm()
+        posts = Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -39,10 +42,14 @@ class HomeTableViewController: UITableViewController {
                     case .success(let value):
                         let postJsons = JSON(value)
                         for (_, postJson) in postJsons {
-                            print(postJson)
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
-                            self.posts.append(post)
+                            let realm = try! Realm()
+                            try! realm.write {
+                                realm.add(post, update: true)
+                            }
                         }
+                        let realm = try! Realm()
+                        self.posts = Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
                         self.tableView.reloadData()
                     case .failure(let error):
                         print(error)

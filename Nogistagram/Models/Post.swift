@@ -11,9 +11,15 @@ import RealmSwift
 import ObjectMapper
 
 class Post: Object, Mappable {
-    
+    dynamic var id: Int = 0
+    dynamic var userId: Int = 0
     dynamic var imageUrl =  ""
     dynamic var body = ""
+    dynamic var createdAt: Date?
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
     required convenience init?(map: Map) {
         self.init()
@@ -21,8 +27,15 @@ class Post: Object, Mappable {
     }
     
     func mapping(map: Map) {
+        id <- map["id"]
+        userId <- map["user_id"]
         imageUrl <- map["image_url"]
         body <- map["body"]
         
+        if let createdAtString = map["created_at"].currentValue as? String {
+            let formatter: DateFormatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            createdAt = formatter.date(from: createdAtString)
+        }
     }
 }
