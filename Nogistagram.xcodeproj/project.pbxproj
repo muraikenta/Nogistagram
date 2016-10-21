@@ -15,6 +15,7 @@
 		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
 		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
 		242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */; };
+		24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Login.storyboard */; };
 		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
@@ -35,6 +36,11 @@
 		24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */; };
 		24C97B441DB64FAA001488A2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B431DB64FAA001488A2 /* Post.swift */; };
 		24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C97B451DB659DC001488A2 /* Kingfisher.framework */; };
+		24C97B481DB90044001488A2 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B471DB90044001488A2 /* ExploreViewController.swift */; };
+		24C97B4A1DB90057001488A2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B491DB90057001488A2 /* SearchViewController.swift */; };
+		24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B4D1DB90555001488A2 /* SeachResultTableViewController.swift */; };
+		24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */; };
+		24C97B551DB9067A001488A2 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */; };
 		24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B921DA9EA5800AFA159 /* Constant.swift */; };
 		24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E26B941DAA0D6A00AFA159 /* Main.storyboard */; };
 		24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */; };
@@ -76,6 +82,7 @@
 		242FC0941DA65337008B23AB /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		242FC0961DA66698008B23AB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueNameRegistrationViewController.swift; sourceTree = "<group>"; };
+		24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2491A8811DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -98,6 +105,11 @@
 		24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		24C97B431DB64FAA001488A2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		24C97B451DB659DC001488A2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		24C97B471DB90044001488A2 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		24C97B491DB90057001488A2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		24C97B4D1DB90555001488A2 /* SeachResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachResultTableViewController.swift; sourceTree = "<group>"; };
+		24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		24E26B921DA9EA5800AFA159 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		24E26B941DAA0D6A00AFA159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginable.swift; sourceTree = "<group>"; };
@@ -136,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */,
 				24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */,
 				FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */,
 				FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */,
@@ -161,6 +174,7 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */,
 				24C97B451DB659DC001488A2 /* Kingfisher.framework */,
 				FC442D1D1DB37B4F00A1D17A /* Realm.framework */,
 				FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */,
@@ -269,6 +283,8 @@
 				FC0966741DA272D400433A4C /* .keep */,
 				24E26BA01DB0E9E500AFA159 /* NewPostDetailViewController.xib */,
 				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
+				24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */,
+				24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,11 +305,14 @@
 				FC09667B1DA2751800433A4C /* .keep */,
 				FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */,
 				24C97B3F1DB4E0F8001488A2 /* CustomFusumaViewController.swift */,
+				24C97B471DB90044001488A2 /* ExploreViewController.swift */,
 				FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */,
 				FC09667F1DA27B2D00433A4C /* LoginViewController.swift */,
 				24E26B9B1DAFAB2400AFA159 /* NewPhotoViewController.swift */,
 				24E26B9F1DB0E9E500AFA159 /* NewPostDetailViewController.swift */,
 				FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */,
+				24C97B4D1DB90555001488A2 /* SeachResultTableViewController.swift */,
+				24C97B491DB90057001488A2 /* SearchViewController.swift */,
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
 			);
@@ -331,6 +350,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		24C97B781DB91F5D001488A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		2491A8781DA10DA500C552EB /* Nogistagram */ = {
 			isa = PBXNativeTarget;
@@ -340,6 +369,7 @@
 				2491A8761DA10DA500C552EB /* Frameworks */,
 				2491A8771DA10DA500C552EB /* Resources */,
 				242FC08F1DA64FA0008B23AB /* ShellScript */,
+				24C97B781DB91F5D001488A2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -395,6 +425,7 @@
 				24C97B371DB103E2001488A2 /* FSVideoCameraView.xib in Resources */,
 				24E26BA21DB0E9E500AFA159 /* NewPostDetailViewController.xib in Resources */,
 				2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */,
+				24C97B551DB9067A001488A2 /* SearchResultTableViewCell.xib in Resources */,
 				24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */,
 				24C97B251DB103C5001488A2 /* FSAlbumView.xib in Resources */,
 				24C97B331DB103E2001488A2 /* FSCameraView.xib in Resources */,
@@ -432,6 +463,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PagingMenuController.framework",
 			);
 			outputPaths = (
 			);
@@ -446,12 +478,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C97B4A1DB90057001488A2 /* SearchViewController.swift in Sources */,
 				24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */,
 				24E26BA71DB0F43300AFA159 /* NibInstantiatable.swift in Sources */,
 				24C97B271DB103CE001488A2 /* FSAlbumView.swift in Sources */,
 				24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */,
+				24C97B481DB90044001488A2 /* ExploreViewController.swift in Sources */,
 				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
 				24C97B351DB103E2001488A2 /* FSImageCropView.swift in Sources */,
 				24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */,
@@ -462,7 +496,9 @@
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
+				24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */,
 				24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */,
+				24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,

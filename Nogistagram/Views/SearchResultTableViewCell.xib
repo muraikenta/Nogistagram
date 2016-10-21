@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="KGk-i7-Jjw" customClass="SearchResultTableViewCell" customModule="Nogistagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-OC-vWI">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="Upg-Wa-Zg9"/>
+                            <constraint firstAttribute="height" constant="44" id="oel-K6-FPH"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unique Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-e3-cgs">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8fe-VV-5vS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSx-MY-6rb">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="N59-Fo-sJW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vbA-OC-vWI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="6GH-X3-cN7"/>
+                    <constraint firstItem="uSx-MY-6rb" firstAttribute="top" secondItem="ahG-e3-cgs" secondAttribute="bottom" constant="2" id="G6A-Nj-AkA"/>
+                    <constraint firstItem="ahG-e3-cgs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="QHk-EX-PBG"/>
+                    <constraint firstItem="ahG-e3-cgs" firstAttribute="leading" secondItem="vbA-OC-vWI" secondAttribute="trailing" constant="8" id="fS8-UM-QH5"/>
+                    <constraint firstItem="uSx-MY-6rb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gU7-7c-L6f"/>
+                    <constraint firstItem="ahG-e3-cgs" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hM6-hu-ulB"/>
+                    <constraint firstItem="vbA-OC-vWI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jnO-oa-5cP"/>
+                    <constraint firstItem="uSx-MY-6rb" firstAttribute="leading" secondItem="vbA-OC-vWI" secondAttribute="trailing" constant="8" id="kIz-1H-m2M"/>
+                    <constraint firstAttribute="bottom" secondItem="uSx-MY-6rb" secondAttribute="bottom" constant="7" id="rYT-J3-PJw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageView" destination="vbA-OC-vWI" id="cTt-gl-Ftj"/>
+                <outlet property="uniqueNameLabel" destination="ahG-e3-cgs" id="NYg-FH-j3Q"/>
+                <outlet property="userImageView" destination="vbA-OC-vWI" id="BB4-o1-NVr"/>
+                <outlet property="userNameLabel" destination="uSx-MY-6rb" id="1Te-m0-PIu"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="62"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="setting" width="29" height="29"/>
+    </resources>
+</document>
