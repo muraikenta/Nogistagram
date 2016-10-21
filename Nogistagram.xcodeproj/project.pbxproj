@@ -41,18 +41,6 @@
 		24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B4D1DB90555001488A2 /* SeachResultTableViewController.swift */; };
 		24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */; };
 		24C97B551DB9067A001488A2 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */; };
-		24C97B691DB91E64001488A2 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B591DB91E64001488A2 /* BarView.swift */; };
-		24C97B6A1DB91E64001488A2 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B5A1DB91E64001488A2 /* BaseButtonBarPagerTabStripViewController.swift */; };
-		24C97B6B1DB91E64001488A2 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B5B1DB91E64001488A2 /* ButtonBarPagerTabStripViewController.swift */; };
-		24C97B6C1DB91E64001488A2 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B5C1DB91E64001488A2 /* ButtonBarView.swift */; };
-		24C97B6D1DB91E64001488A2 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B5D1DB91E64001488A2 /* ButtonBarViewCell.swift */; };
-		24C97B6E1DB91E64001488A2 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B5E1DB91E64001488A2 /* ButtonCell.xib */; };
-		24C97B701DB91E64001488A2 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B611DB91E64001488A2 /* IndicatorInfo.swift */; };
-		24C97B711DB91E64001488A2 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B621DB91E64001488A2 /* PagerTabStripBehaviour.swift */; };
-		24C97B721DB91E64001488A2 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B631DB91E64001488A2 /* PagerTabStripError.swift */; };
-		24C97B751DB91E64001488A2 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B661DB91E64001488A2 /* SwipeDirection.swift */; };
-		24C97B7C1DB92254001488A2 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B7B1DB92254001488A2 /* BarPagerTabStripViewController.swift */; };
-		24C97B7E1DB925E8001488A2 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B7D1DB925E8001488A2 /* PagerTabStripViewController.swift */; };
 		24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B921DA9EA5800AFA159 /* Constant.swift */; };
 		24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24E26B941DAA0D6A00AFA159 /* Main.storyboard */; };
 		24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */; };
@@ -122,18 +110,6 @@
 		24C97B4D1DB90555001488A2 /* SeachResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachResultTableViewController.swift; sourceTree = "<group>"; };
 		24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
-		24C97B591DB91E64001488A2 /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		24C97B5A1DB91E64001488A2 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		24C97B5B1DB91E64001488A2 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		24C97B5C1DB91E64001488A2 /* ButtonBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarView.swift; sourceTree = "<group>"; };
-		24C97B5D1DB91E64001488A2 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		24C97B5E1DB91E64001488A2 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
-		24C97B611DB91E64001488A2 /* IndicatorInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorInfo.swift; sourceTree = "<group>"; };
-		24C97B621DB91E64001488A2 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		24C97B631DB91E64001488A2 /* PagerTabStripError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripError.swift; sourceTree = "<group>"; };
-		24C97B661DB91E64001488A2 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
-		24C97B7B1DB92254001488A2 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		24C97B7D1DB925E8001488A2 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		24E26B921DA9EA5800AFA159 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		24E26B941DAA0D6A00AFA159 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24E26B971DAA1C6100AFA159 /* FacebookLoginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginable.swift; sourceTree = "<group>"; };
@@ -257,25 +233,6 @@
 			path = Nogistagram;
 			sourceTree = "<group>";
 		};
-		24C97B571DB91E64001488A2 /* XLPagerTabStrip */ = {
-			isa = PBXGroup;
-			children = (
-				24C97B7B1DB92254001488A2 /* BarPagerTabStripViewController.swift */,
-				24C97B591DB91E64001488A2 /* BarView.swift */,
-				24C97B5A1DB91E64001488A2 /* BaseButtonBarPagerTabStripViewController.swift */,
-				24C97B5B1DB91E64001488A2 /* ButtonBarPagerTabStripViewController.swift */,
-				24C97B5C1DB91E64001488A2 /* ButtonBarView.swift */,
-				24C97B5D1DB91E64001488A2 /* ButtonBarViewCell.swift */,
-				24C97B5E1DB91E64001488A2 /* ButtonCell.xib */,
-				24C97B611DB91E64001488A2 /* IndicatorInfo.swift */,
-				24C97B621DB91E64001488A2 /* PagerTabStripBehaviour.swift */,
-				24C97B631DB91E64001488A2 /* PagerTabStripError.swift */,
-				24C97B7D1DB925E8001488A2 /* PagerTabStripViewController.swift */,
-				24C97B661DB91E64001488A2 /* SwipeDirection.swift */,
-			);
-			path = XLPagerTabStrip;
-			sourceTree = "<group>";
-		};
 		24E26B961DAA1C2400AFA159 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,7 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				24E26BAB1DB1018700AFA159 /* CustomFusuma */,
-				24C97B571DB91E64001488A2 /* XLPagerTabStrip */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -475,7 +431,6 @@
 				24C97B331DB103E2001488A2 /* FSCameraView.xib in Resources */,
 				2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */,
 				2491A8821DA10DA500C552EB /* Login.storyboard in Resources */,
-				24C97B6E1DB91E64001488A2 /* ButtonCell.xib in Resources */,
 				FC09667E1DA2754F00433A4C /* .keep in Resources */,
 				242FC0951DA65337008B23AB /* .keep in Resources */,
 				24C97B311DB103E2001488A2 /* FSAlbumViewCell.xib in Resources */,
@@ -538,32 +493,21 @@
 				FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */,
 				24E26B9A1DAA9B7000AFA159 /* SettingsTableViewController.swift in Sources */,
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
-				24C97B701DB91E64001488A2 /* IndicatorInfo.swift in Sources */,
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
-				24C97B711DB91E64001488A2 /* PagerTabStripBehaviour.swift in Sources */,
-				24C97B721DB91E64001488A2 /* PagerTabStripError.swift in Sources */,
-				24C97B6B1DB91E64001488A2 /* ButtonBarPagerTabStripViewController.swift in Sources */,
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
-				24C97B691DB91E64001488A2 /* BarView.swift in Sources */,
-				24C97B751DB91E64001488A2 /* SwipeDirection.swift in Sources */,
 				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
 				24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */,
 				24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */,
 				24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
-				24C97B7C1DB92254001488A2 /* BarPagerTabStripViewController.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,
 				24E26BA11DB0E9E500AFA159 /* NewPostDetailViewController.swift in Sources */,
-				24C97B6D1DB91E64001488A2 /* ButtonBarViewCell.swift in Sources */,
 				24C97B361DB103E2001488A2 /* FSVideoCameraView.swift in Sources */,
-				24C97B6A1DB91E64001488A2 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
-				24C97B7E1DB925E8001488A2 /* PagerTabStripViewController.swift in Sources */,
 				24C97B321DB103E2001488A2 /* FSCameraView.swift in Sources */,
 				24E26B9C1DAFAB2400AFA159 /* NewPhotoViewController.swift in Sources */,
 				242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */,
 				24C97B441DB64FAA001488A2 /* Post.swift in Sources */,
-				24C97B6C1DB91E64001488A2 /* ButtonBarView.swift in Sources */,
 				24C97B341DB103E2001488A2 /* FSConstants.swift in Sources */,
 				24C97B301DB103E2001488A2 /* FSAlbumViewCell.swift in Sources */,
 			);
