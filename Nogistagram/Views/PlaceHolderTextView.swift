@@ -66,7 +66,7 @@ class PlaceHolderTextView: UITextView {
     }
     
     func textFieldDidChange(textView: PlaceHolderTextView) {
-        placeHolderLable.isHidden = (0 == text.characters.count) ? false : true
+        placeHolderLable.isHidden = (text.characters.count > 0) ? true : false
     }
     
     deinit {
