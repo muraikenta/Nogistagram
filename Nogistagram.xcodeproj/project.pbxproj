@@ -284,8 +284,8 @@
 			children = (
 				FC0966741DA272D400433A4C /* .keep */,
 				24E26BA01DB0E9E500AFA159 /* NewPostDetailViewController.xib */,
-				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
 				FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */,
+				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
 				24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */,
 				24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */,
 			);
