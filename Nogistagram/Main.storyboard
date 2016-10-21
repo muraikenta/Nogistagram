@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fpN-rX-EGD" id="7Sp-OH-BUe">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="451"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSj-Jz-tDD" id="XAt-0P-eTm">
-                                    <frame key="frameInset" width="375" height="450"/>
+                                    <frame key="frameInset" width="375" height="451"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-ve-L17">
@@ -303,50 +303,45 @@
                                     <action selector="cancelButtonTapped:" destination="Pwt-RF-QxF" eventType="touchUpInside" id="q14-Yf-ZNG"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-vD-Xxn" customClass="ButtonBarView" customModule="Nogistagram">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ZZD-dv-xEH"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="abm-Iz-dgc">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-Zu-89r">
-                                <frame key="frameInset" minY="86" width="375" height="581"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-Er-enG">
+                                <frame key="frameInset" height="615"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="t6Z-jb-SNe" kind="embed" id="ls5-Bp-JLd"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cdd-yt-uc0" firstAttribute="top" secondItem="qZG-2p-2y5" secondAttribute="bottom" id="2q2-RT-lvS"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="baseline" secondItem="cdd-yt-uc0" secondAttribute="firstBaseline" constant="-1.5" id="98g-X4-BDw"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="top" secondItem="cdd-yt-uc0" secondAttribute="top" id="C6g-cJ-kyA"/>
-                            <constraint firstItem="dOi-vD-Xxn" firstAttribute="top" secondItem="meG-qk-hMl" secondAttribute="bottom" constant="8" id="Ik4-VN-fFJ"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="trailing" secondItem="mRB-cp-NXw" secondAttribute="trailingMargin" id="LhI-cp-ekV"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="leading" secondItem="cdd-yt-uc0" secondAttribute="trailing" id="OSu-dk-wL8"/>
-                            <constraint firstAttribute="trailing" secondItem="dOi-vD-Xxn" secondAttribute="trailing" id="Qfm-ON-3Vi"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="baseline" secondItem="cdd-yt-uc0" secondAttribute="baseline" constant="-1.5" id="glB-Zq-llQ"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="firstBaseline" secondItem="cdd-yt-uc0" secondAttribute="baseline" constant="-1.5" id="iqG-fb-Tkc"/>
                             <constraint firstItem="meG-qk-hMl" firstAttribute="bottom" secondItem="cdd-yt-uc0" secondAttribute="bottom" id="ixO-Ld-RLp"/>
                             <constraint firstItem="cdd-yt-uc0" firstAttribute="leading" secondItem="mRB-cp-NXw" secondAttribute="leadingMargin" id="pM2-ix-MMF"/>
-                            <constraint firstItem="dOi-vD-Xxn" firstAttribute="leading" secondItem="mRB-cp-NXw" secondAttribute="leading" id="uI6-YA-dbN"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="buttonBarView" destination="dOi-vD-Xxn" id="Khh-Mi-sDL"/>
-                        <outlet property="containerView" destination="ZDW-Zu-89r" id="Zs5-26-k1b"/>
-                        <outlet property="customButtonBarView" destination="dOi-vD-Xxn" id="168-CS-CL7"/>
-                        <outlet property="customContainerView" destination="ZDW-Zu-89r" id="wO8-gF-6jo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxY-EC-y3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="-522.18890554722645"/>
+        </scene>
+        <!--Paging Menu Controller-->
+        <scene sceneID="9IN-4n-iCG">
+            <objects>
+                <viewController id="t6Z-jb-SNe" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cov-Dd-zXg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXe-Jc-3Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="-522"/>
         </scene>
     </scenes>
     <resources>

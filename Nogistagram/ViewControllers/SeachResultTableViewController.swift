@@ -8,19 +8,9 @@
 
 import UIKit
 
-class SeachResultTableViewController: UITableViewController, IndicatorInfoProvider {
+class SeachResultTableViewController: UITableViewController {
     
     let cellIdentifier = "SearchResultCell"
-    var itemInfo = IndicatorInfo(title: "View")
-    
-    init(style: UITableViewStyle, itemInfo: IndicatorInfo) {
-        self.itemInfo = itemInfo
-        super.init(style: style)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +42,5 @@ class SeachResultTableViewController: UITableViewController, IndicatorInfoProvid
         cell.uniqueNameLabel.text = "hogehoge"
         cell.userNameLabel.text = "ほげほげ"
         return cell
-    }
-
-    // MARK: - IndicatorInfoProvider
-
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
     }
 }
