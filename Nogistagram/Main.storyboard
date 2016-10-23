@@ -290,6 +290,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="Pwt-RF-QxF" eventType="editingChanged" id="XDD-Ch-Lw3"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meG-qk-hMl">
                                 <constraints>
@@ -333,6 +336,10 @@
         <scene sceneID="9IN-4n-iCG">
             <objects>
                 <viewController id="t6Z-jb-SNe" customClass="PagingMenuController" customModule="PagingMenuController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a5y-5R-pFO"/>
+                        <viewControllerLayoutGuide type="bottom" id="eId-d9-QbJ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cov-Dd-zXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="615"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

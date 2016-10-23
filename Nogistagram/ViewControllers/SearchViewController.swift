@@ -8,11 +8,16 @@
 
 import UIKit
 import PagingMenuController
+import ObjectMapper
+import SwiftyJSON
+import Alamofire
+import RealmSwift
+
+var userResultsController = SeachResultTableViewController(style: .plain)
+var tagResultsController = SeachResultTableViewController(style: .plain)
+var spotResultsController = SeachResultTableViewController(style: .plain)
 
 private var pagingControllers: [UIViewController] {
-    let userResultsController = SeachResultTableViewController(style: .plain)
-    let tagResultsController = SeachResultTableViewController(style: .plain)
-    let spotResultsController = SeachResultTableViewController(style: .plain)
     return [userResultsController, tagResultsController, spotResultsController]
 }
 
@@ -39,7 +44,6 @@ struct MenuOptions: MenuViewCustomizable {
         init(title: String) {
             displayMode = .text(title: MenuItemText(text: title))
         }
-        
     }
 }
 
@@ -62,6 +66,31 @@ class SearchViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func search(_ text: String) {
+        Alamofire
+            .request("\(Constant.Api.root)/seach", method: .get, parameters: ["text": text])
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let searchResults = JSON(value)
+                    var tmpUsers: [User] = []
+                    for (_, userJson) in searchResults["users"] {
+                        let user = Mapper<User>().map(JSON: userJson.dictionaryObject!)!
+                        tmpUsers.append(user)
+                    }
+                    userResultsController.users = tmpUsers
+                case .failure(let error):
+                    print(error)
+                }
+                
+        }
+    }
+
+    @IBAction func textFieldChanged(_ sender: UITextField) {
+        search(sender.text!)
     }
     
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
