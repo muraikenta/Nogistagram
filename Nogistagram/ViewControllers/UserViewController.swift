@@ -13,7 +13,7 @@ class UserViewController: UIViewController {
     
     var user: User! {
         didSet {
-            navigationController?.title = user.uniqueName
+            navigationController?.navigationBar.topItem?.title = user.uniqueName
             userImageView.kf.setImage(with: URL(string: user.imageUrl))
             userNameLabel.text = user.name
             userIntroductionLabel.text = user.introduction
