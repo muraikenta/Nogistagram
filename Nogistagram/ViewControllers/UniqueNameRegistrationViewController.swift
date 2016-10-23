@@ -50,7 +50,7 @@ class UniqueNameRegistrationViewController: UIViewController {
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
-                    case .success(let value):
+                    case .success(_):
                         let headers = response.response!.allHeaderFields
                         let accessToken: String = headers["Access-Token"]! as! String
                         let uid: String = headers["Uid"]! as! String
@@ -80,7 +80,7 @@ class UniqueNameRegistrationViewController: UIViewController {
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
-                    case .success(let value):
+                    case .success(_):
                         let headers = response.response!.allHeaderFields
                         let accessToken: String = headers["Access-Token"]! as! String
                         let uid: String = headers["Uid"]! as! String
