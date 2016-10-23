@@ -7,8 +7,6 @@
 //
 
 import ObjectMapper
-import Realm
-import RealmSwift
 
 class Session: User {
     required convenience init?(map: Map) {
