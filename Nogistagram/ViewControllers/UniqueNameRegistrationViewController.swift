@@ -29,16 +29,29 @@ class UniqueNameRegistrationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func registrationSuccessHandler(_ response: DataResponse<Any>) {
+        let headers = response.response!.allHeaderFields
+        let accessToken: String = headers["Access-Token"]! as! String
+        let uid: String = headers["Uid"]! as! String
+        let clientId: String = headers["Client"]! as! String
 
-    /*
-    // MARK: - Navigation
+        let keychain = Keychain(service: Constant.Keychain.service)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // TODO: sessionモデルにユーザー情報保存
+        do {
+            try keychain.set(accessToken, key: "accessToken")
+            try keychain.set(uid, key: "uid")
+            try keychain.set(clientId, key: "clientId")
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+            self.present(tabBarController, animated: true, completion: nil)
+        } catch let error {
+            print(error)
+        }
+
     }
-    */
 
     // MARK: Actions
     @IBAction func register(_ sender: UIButton) {
@@ -51,25 +64,7 @@ class UniqueNameRegistrationViewController: UIViewController {
                 .responseJSON { response in
                     switch response.result {
                     case .success(_):
-                        let headers = response.response!.allHeaderFields
-                        let accessToken: String = headers["Access-Token"]! as! String
-                        let uid: String = headers["Uid"]! as! String
-                        let clientId: String = headers["Client"]! as! String
-
-                        let keychain = Keychain(service: Constant.Keychain.service)
-
-                        // TODO: sessionモデルにユーザー情報保存
-                        do {
-                            try keychain.set(accessToken, key: "accessToken")
-                            try keychain.set(uid, key: "uid")
-                            try keychain.set(clientId, key: "clientId")
-                            
-                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
-                            self.present(tabBarController, animated: true, completion: nil)
-                        } catch let error {
-                            print(error)
-                        }
+                        self.registrationSuccessHandler(response)
                     case .failure(let error):
                         print(error)
                     }
@@ -81,22 +76,7 @@ class UniqueNameRegistrationViewController: UIViewController {
                 .responseJSON { response in
                     switch response.result {
                     case .success(_):
-                        let headers = response.response!.allHeaderFields
-                        let accessToken: String = headers["Access-Token"]! as! String
-                        let uid: String = headers["Uid"]! as! String
-                        let clientId: String = headers["Client"]! as! String
-
-                        let keychain = Keychain(service: Constant.Keychain.service)
-                        do {
-                            try keychain.set(accessToken, key: "accessToken")
-                            try keychain.set(uid, key: "uid")
-                            try keychain.set(clientId, key: "clientId")
-                            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
-                            self.present(tabBarController, animated: true, completion: nil)
-                        } catch let error {
-                            print(error)
-                        }
+                        self.registrationSuccessHandler(response)
                     case .failure(let error):
                         print(error)
                     }
