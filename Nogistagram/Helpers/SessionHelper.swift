@@ -27,4 +27,8 @@ class SessionHelper {
             return nil
         }
     }
+    
+    static func currentUser() -> User? {
+        return Session.all().first
+    }
 }

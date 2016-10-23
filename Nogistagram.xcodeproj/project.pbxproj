@@ -19,6 +19,7 @@
 		2472C7461DBCAEE700094B28 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7451DBCAEE700094B28 /* Realm+.swift */; };
 		2472C74A1DBCB8FF00094B28 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7491DBCB8FF00094B28 /* RealmHelper.swift */; };
 		2472C74C1DBCBB8500094B28 /* SessionSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C74B1DBCBB8500094B28 /* SessionSaver.swift */; };
+		2472C74F1DBCC3D500094B28 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C74E1DBCC3D500094B28 /* UserViewController.swift */; };
 		24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Login.storyboard */; };
@@ -90,6 +91,7 @@
 		2472C7451DBCAEE700094B28 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		2472C7491DBCB8FF00094B28 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2472C74B1DBCBB8500094B28 /* SessionSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSaver.swift; sourceTree = "<group>"; };
+		2472C74E1DBCC3D500094B28 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				24C97B491DB90057001488A2 /* SearchViewController.swift */,
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
+				2472C74E1DBCC3D500094B28 /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
 				24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */,
+				2472C74F1DBCC3D500094B28 /* UserViewController.swift in Sources */,
 				24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */,
 				24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
