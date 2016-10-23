@@ -12,6 +12,12 @@ class SeachResultTableViewController: UITableViewController {
     
     let cellIdentifier = "SearchResultCell"
     
+    var users: [User] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,13 +40,14 @@ class SeachResultTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return users.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SearchResultTableViewCell
-        cell.uniqueNameLabel.text = "hogehoge"
-        cell.userNameLabel.text = "ほげほげ"
+        let user: User = users[indexPath.row]
+        cell.uniqueNameLabel.text = user.uniqueName
+        cell.userNameLabel.text = user.name
         return cell
     }
 }
