@@ -59,6 +59,7 @@
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
+		FC2C04121DBA1FF700359E79 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */; };
 		FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582191DAA1E6900F7983E /* Regexp.swift */; };
 		FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */; };
 		FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC35821D1DAA358B00F7983E /* RxSwift.framework */; };
@@ -133,6 +134,7 @@
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		FC3582191DAA1E6900F7983E /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		FC35821D1DAA358B00F7983E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				FC0966741DA272D400433A4C /* .keep */,
 				24E26BA01DB0E9E500AFA159 /* NewPostDetailViewController.xib */,
+				FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */,
 				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
 				24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */,
 				24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */,
@@ -523,6 +526,7 @@
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,
 				24E26BA11DB0E9E500AFA159 /* NewPostDetailViewController.swift in Sources */,
 				24C97B361DB103E2001488A2 /* FSVideoCameraView.swift in Sources */,
+				FC2C04121DBA1FF700359E79 /* PlaceHolderTextView.swift in Sources */,
 				24C97B321DB103E2001488A2 /* FSCameraView.swift in Sources */,
 				24E26B9C1DAFAB2400AFA159 /* NewPhotoViewController.swift in Sources */,
 				242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */,
