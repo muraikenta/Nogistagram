@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UserName-->
+        <!--UniqueName-->
         <scene sceneID="rWd-wt-UA2">
             <objects>
-                <viewController id="4Jn-19-mqX" sceneMemberID="viewController">
+                <viewController id="4Jn-19-mqX" customClass="UserViewController" customModule="Nogistagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gDj-Sc-c91"/>
                         <viewControllerLayoutGuide type="bottom" id="WVW-ok-jk9"/>
@@ -20,20 +20,64 @@
                     <view key="view" contentMode="scaleToFill" id="3le-ME-NTN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZfM-d3-CPq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="G7q-Ll-RtK"/>
+                                    <constraint firstAttribute="width" constant="60" id="Xhq-fV-L4w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-Me-B0F">
+                                <frame key="frameInset" minX="16" minY="148" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-Tt-aRb">
+                                <frame key="frameInset" minX="16" minY="177" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5F-jz-IX7">
+                                <frame key="frameInset" minX="16" minY="206" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIG-7D-VUF">
+                                <frame key="frameInset" minX="16" minY="235" width="343" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZfM-d3-CPq" firstAttribute="top" secondItem="gDj-Sc-c91" secondAttribute="bottom" constant="8" id="J4D-XU-zGB"/>
+                            <constraint firstItem="ZfM-d3-CPq" firstAttribute="leading" secondItem="3le-ME-NTN" secondAttribute="leadingMargin" id="e6F-0Y-1zU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="fgw-KW-nnI"/>
-                    <navigationItem key="navigationItem" title="UserName" id="4t3-Db-aE0">
+                    <navigationItem key="navigationItem" title="UniqueName" id="4t3-Db-aE0">
                         <barButtonItem key="rightBarButtonItem" image="setting" id="btO-DV-zMd">
                             <connections>
                                 <segue destination="4NB-Z3-WcV" kind="show" id="WYP-hN-ACl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userImageView" destination="ZfM-d3-CPq" id="zDb-u6-4fV"/>
+                        <outlet property="userIntroductionLabel" destination="ZbP-Tt-aRb" id="tSX-4B-Akn"/>
+                        <outlet property="userNameLabel" destination="JOc-Me-B0F" id="Uq9-MA-Dkl"/>
+                        <outlet property="userWebsiteLabel" destination="k5F-jz-IX7" id="Mfl-7a-j2s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34f-jY-APh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="1396"/>
+            <point key="canvasLocation" x="1372" y="1539.5802098950526"/>
         </scene>
         <!--オプション-->
         <scene sceneID="00u-NH-YiS">
@@ -61,7 +105,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ch-YC-56q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="1396"/>
+            <point key="canvasLocation" x="2202" y="1540"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AAG-YJ-WDs">

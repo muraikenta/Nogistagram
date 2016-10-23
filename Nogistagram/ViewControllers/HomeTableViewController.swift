@@ -11,7 +11,6 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import Kingfisher
-import RealmSwift
 
 class HomeTableViewController: UITableViewController {
     
@@ -42,10 +41,7 @@ class HomeTableViewController: UITableViewController {
                         let postJsons = JSON(value)
                         for (_, postJson) in postJsons {
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
-                            let realm = try! Realm()
-                            try! realm.write {
-                                realm.add(post, update: true)
-                            }
+                            post.save()
                         }
                         self.posts = Post.all()
                         self.tableView.reloadData()

@@ -41,9 +41,4 @@ class User: Object, Mappable {
         imageUrl <- map["image_url"]
         privacyType <- map["privacy_type"]
     }
-    
-    static func all() -> [User] {
-        let realm = try! Realm()
-        return Array(realm.objects(User.self))
-    }
 }
