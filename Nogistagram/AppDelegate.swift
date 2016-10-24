@@ -15,15 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // RealmHelper.purge()
         // Override point for customization after application launch.
         let keychain = Keychain(service: Constant.Keychain.service)
         do {
             let uid: String? = try keychain.get("uid")
-            if uid != nil {
+            if uid != nil && SessionHelper.currentUser() != nil {
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") 
+                self.window?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
             }
         } catch let error {
             print(error)

@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchResultTableViewCell: UITableViewCell {
+    
+    var user: User = User() {
+        didSet {
+            render()
+        }
+    }
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var uniqueNameLabel: UILabel!
@@ -17,13 +24,19 @@ class SearchResultTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        userImageView.layer.cornerRadius = 20.0
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    func render() {
+        userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
+            self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
+        })
+        uniqueNameLabel.text = user.uniqueName
+        userNameLabel.text = user.name
+    }
 }

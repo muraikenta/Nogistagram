@@ -18,7 +18,7 @@ class User: Object, Mappable {
     dynamic var introduction: String!
     dynamic var website: String!
     dynamic var gender: Int = 0
-    dynamic var imageUrl: String!
+    dynamic var imageUrl: String = ""
     dynamic var privacyType: Int = 0
     
     override static func primaryKey() -> String? {

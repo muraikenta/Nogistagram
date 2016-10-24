@@ -9,7 +9,7 @@
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
-
+    
     // MARK: Properties
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!

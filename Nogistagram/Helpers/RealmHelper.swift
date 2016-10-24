@@ -11,7 +11,7 @@ import RealmSwift
 
 class RealmHelper {
     // マイグレーションが必要なときに、以下でDBを削除すると楽
-    func purgeRealm() {
+    static func purge() {
         do {
             try FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
         } catch {
