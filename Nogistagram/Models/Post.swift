@@ -16,7 +16,7 @@ class Post: Object, Mappable {
     dynamic var imageUrl =  ""
     dynamic var body = ""
     dynamic var createdAt: Date?
-    //dynamic var isLiked: Bool = false
+    dynamic var isLiked: Bool = false
 
     override static func primaryKey() -> String? {
         return "id"
@@ -32,7 +32,7 @@ class Post: Object, Mappable {
         userId <- map["user_id"]
         imageUrl <- map["image_url"]
         body <- map["body"]
-        //isLiked <- map["isLiked"]
+        isLiked <- map["isLiked"]
         
         if let createdAtString = map["created_at"].currentValue as? String {
             let formatter: DateFormatter = DateFormatter()
