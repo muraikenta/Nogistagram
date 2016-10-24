@@ -18,6 +18,10 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         posts = Post.all()
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "logo_black.png")
+        navigationItem.titleView = imageView
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -75,6 +79,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
         let post: Post = posts[indexPath.row]
+        cell.userNameLabel.text = post.user?.uniqueName
         cell.postImageView.kf.setImage(with: URL(string: post.imageUrl))
         cell.postBodyTextView.text = post.body
         return cell

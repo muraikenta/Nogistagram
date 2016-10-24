@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // migrationし直す場合には以下をコメントイン
+        // RealmHelper.purgeRealm()
         // Override point for customization after application launch.
         let keychain = Keychain(service: Constant.Keychain.service)
         do {
