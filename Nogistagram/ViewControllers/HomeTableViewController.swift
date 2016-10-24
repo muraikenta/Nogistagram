@@ -18,6 +18,11 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         posts = Post.all()
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        let image = UIImage(named: "logo_black.png")
+        imageView.image = image
+        navigationItem.titleView = imageView
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations

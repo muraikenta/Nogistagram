@@ -143,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="462" y="1540"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="3pl-b7-76B">
             <objects>
                 <navigationController id="ix1-vn-Hqd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pOG-8P-RJg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="pOG-8P-RJg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9z0-o8-j64">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -225,7 +225,7 @@
                             <outlet property="delegate" destination="ke8-q5-fFx" id="Xrm-T9-mPL"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="Syr-2o-wAU"/>
+                    <tabBarItem key="tabBarItem" selectedImage="home" id="Syr-2o-wAU"/>
                     <navigationItem key="navigationItem" id="cwj-it-EgG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9Z-h6-mPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,6 +420,7 @@
     </scenes>
     <resources>
         <image name="emptyHeart" width="50" height="50"/>
+        <image name="home" width="30" height="30"/>
         <image name="setting" width="29" height="29"/>
     </resources>
 </document>
