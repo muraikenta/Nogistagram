@@ -10,10 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Alamofire
-import SwiftyJSON
-import KeychainAccess
 
-class LoginViewController: UIViewController, FacebookLoginable {
+class LoginViewController: UIViewController, FacebookLoginable, SessionSaver {
 
     // MARK: Properties
     var userParams: [String: String] = [:]
@@ -109,34 +107,16 @@ class LoginViewController: UIViewController, FacebookLoginable {
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 switch response.result {
-                case .success(let value):
-                    let headers = response.response!.allHeaderFields
-                    let accessToken: String = headers["Access-Token"]! as! String
-                    let uid: String = headers["Uid"]! as! String
-                    let clientId: String = headers["Client"]! as! String
+                case .success(_):
+                    self.saveSession(response)
                     
-                    let keychain = Keychain(service: Constant.Keychain.service)
-                    do {
-                        try keychain.set(accessToken, key: "accessToken")
-                        try keychain.set(uid, key: "uid")
-                        try keychain.set(clientId, key: "clientId")
-                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
-                        self.present(tabBarController, animated: true, completion: nil)
-                    } catch let error {
-                        print(error)
-                    }
+                    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                    self.present(tabBarController, animated: true, completion: nil)
                 case .failure(let error):
                     print(error)
                 }
         }
-        let keychain = Keychain(service: "com.example.Nogistagram")
-        if let uid = try? keychain.get("uid") {
-            print(uid)
-        } else {
-            print("error!!")
-        }
-
     }
     
 

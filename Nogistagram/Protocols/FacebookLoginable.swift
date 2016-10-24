@@ -13,7 +13,7 @@ import SnapKit
 import Alamofire
 import KeychainAccess
 
-protocol FacebookLoginable: LoginButtonDelegate {
+protocol FacebookLoginable: LoginButtonDelegate, SessionSaver {
     func addFacebookLoginButton()
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult)
     func loginButtonDidLogOut(_ loginButton: LoginButton)
@@ -84,24 +84,12 @@ extension FacebookLoginable where Self: UIViewController {
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 switch response.result {
-                case .success(let value):
-                    let headers = response.response!.allHeaderFields
-                    let accessToken: String = headers["Access-Token"]! as! String
-                    let uid: String = headers["Uid"]! as! String
-                    let clientId: String = headers["Client"]! as! String
-
-                    let keychain = Keychain(service: Constant.Keychain.service)
-                    do {
-                        try keychain.set(accessToken, key: "accessToken")
-                        try keychain.set(uid, key: "uid")
-                        try keychain.set(clientId, key: "clientId")
-                        
-                        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
-                        self.present(tabBarController, animated: true, completion: nil)
-                    } catch let error {
-                        print(error)
-                    }
+                case .success(_):
+                    self.saveSession(response)
+                    
+                    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+                    self.present(tabBarController, animated: true, completion: nil)
 
                 case .failure(_):
                     self.performSegue(withIdentifier: "toUniqueNameRegistration", sender: userParams)
