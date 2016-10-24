@@ -69,6 +69,7 @@
 		FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */; };
 		FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1D1DB37B4F00A1D17A /* Realm.framework */; };
 		FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */; };
+		FC49B56F1DBE188600DBE012 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC49B56E1DBE188600DBE012 /* FontAwesome.framework */; };
 		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */; };
@@ -145,6 +146,7 @@
 		FC442D1B1DB35F0900A1D17A /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		FC442D1D1DB37B4F00A1D17A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		FC49B56E1DBE188600DBE012 /* FontAwesome.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontAwesome.framework; path = Carthage/Build/iOS/FontAwesome.framework; sourceTree = "<group>"; };
 		FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dollar.framework; path = Carthage/Build/iOS/Dollar.framework; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC49B56F1DBE188600DBE012 /* FontAwesome.framework in Frameworks */,
 				24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */,
 				24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */,
 				FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */,
@@ -188,6 +191,7 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC49B56E1DBE188600DBE012 /* FontAwesome.framework */,
 				24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */,
 				24C97B451DB659DC001488A2 /* Kingfisher.framework */,
 				FC442D1D1DB37B4F00A1D17A /* Realm.framework */,
@@ -485,6 +489,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PagingMenuController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FontAwesome.framework",
 			);
 			outputPaths = (
 			);
