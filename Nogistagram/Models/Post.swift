@@ -12,7 +12,7 @@ import ObjectMapper
 
 class Post: Object, Mappable {
     dynamic var id: Int = 0
-    dynamic var userId: Int = 0
+    dynamic var user: User?
     dynamic var imageUrl =  ""
     dynamic var body = ""
     dynamic var createdAt: Date?
@@ -29,7 +29,7 @@ class Post: Object, Mappable {
     
     func mapping(map: Map) {
         id <- map["id"]
-        userId <- map["user_id"]
+        user <- map["user"]
         imageUrl <- map["image_url"]
         body <- map["body"]
         isLiked <- map["isLiked"]

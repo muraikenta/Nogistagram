@@ -80,6 +80,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
         let post: Post = posts[indexPath.row]
+        cell.userNameLabel.text = post.user?.uniqueName
         cell.postImageView.kf.setImage(with: URL(string: post.imageUrl))
         cell.postBodyTextView.text = post.body
         return cell
