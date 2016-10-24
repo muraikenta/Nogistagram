@@ -196,12 +196,17 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phO-uH-brs">
-                                                    <frame key="frameInset" minX="43" minY="9" width="86" height="21"/>
+                                                    <frame key="frameInset" minX="43" minY="9" width="285" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-k5-Slh">
+                                                    <frame key="frameInset" minX="335" minY="7" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="more"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -230,7 +235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9Z-h6-mPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="-1194"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="-1194.1529235382309"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2W0-aZ-bw4">
@@ -421,6 +426,7 @@
     <resources>
         <image name="emptyHeart" width="50" height="50"/>
         <image name="home" width="30" height="30"/>
+        <image name="more" width="25" height="25"/>
         <image name="setting" width="29" height="29"/>
     </resources>
 </document>
