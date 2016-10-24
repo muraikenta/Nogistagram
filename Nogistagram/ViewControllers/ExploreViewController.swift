@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import ObjectMapper
+import Kingfisher
 
-class ExploreViewController: UIViewController {
+class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    var posts: [Post] = []
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadPosts()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,15 +33,46 @@ class ExploreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadPosts() {
+        if let authDict = SessionHelper.authDict() {
+            Alamofire
+                .request("\(Constant.Api.root)/posts", method: .get, headers: authDict)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        let postJsons = JSON(value)
+                        for (_, postJson) in postJsons {
+                            let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
+                            post.save()
+                        }
+                        self.posts = Post.all()
+//                        self.tableView.reloadData()
+                        self.collectionView.reloadData()
+                    case .failure(let error):
+                        print(error)
+                    }
+                    
+            }
+        } else {
+            print("Error: authToken is nil")
+        }
     }
-    */
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionCell", for: indexPath) as! PostCollectionViewCell
+        let post = posts[indexPath.row]
+        cell.postImageView.kf.setImage(with: URL(string: post.imageUrl))
+        return cell
+    }
+    
 
 }
