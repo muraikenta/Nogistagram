@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SeachResultTableViewController: UITableViewController {
     
@@ -20,10 +21,9 @@ class SeachResultTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)
-        tableView.estimatedRowHeight = 60.0
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = 60
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,8 +46,14 @@ class SeachResultTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SearchResultTableViewCell
         let user: User = users[indexPath.row]
-        cell.uniqueNameLabel.text = user.uniqueName
-        cell.userNameLabel.text = user.name
+        cell.user = user
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let userViewController = UserViewController.instantiate(storyboard: "Main")
+        userViewController.user = user
+        navigationController?.pushViewController(userViewController, animated: true)
     }
 }

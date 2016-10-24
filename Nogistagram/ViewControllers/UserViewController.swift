@@ -11,15 +11,7 @@ import Kingfisher
 
 class UserViewController: UIViewController {
     
-    var user: User! {
-        didSet {
-            navigationController?.navigationBar.topItem?.title = user.uniqueName
-            userImageView.kf.setImage(with: URL(string: user.imageUrl))
-            userNameLabel.text = user.name
-            userIntroductionLabel.text = user.introduction
-            userWebsiteLabel.text = user.website
-        }
-    }
+    var user: User!
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -29,13 +21,24 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.isHidden = false
+        
         user = user ?? SessionHelper.currentUser()!
+        user.save()
+        render()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func render() {
+        self.title = user.uniqueName
+        userImageView.kf.setImage(with: URL(string: user.imageUrl))
+        userNameLabel.text = user.name
+        userIntroductionLabel.text = user.introduction
+        userWebsiteLabel.text = user.website
     }
     
 
