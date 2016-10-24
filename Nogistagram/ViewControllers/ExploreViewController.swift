@@ -47,8 +47,8 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
                             post.save()
                         }
                         self.posts = Post.all()
-//                        self.tableView.reloadData()
                         self.collectionView.reloadData()
+                        self.collectionView.adaptBeautifulGrid(numberOfGridsPerRow: 3, gridLineSpace: 2.0)
                     case .failure(let error):
                         print(error)
                     }
