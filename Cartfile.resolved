@@ -1,6 +1,7 @@
 github "Alamofire/Alamofire" "4.0.1"
 github "BoltsFramework/Bolts-ObjC" "1.8.4"
 github "ankurp/Dollar" "6.0.0"
+github "thii/FontAwesome.swift" "1.0.0"
 github "kishikawakatsumi/KeychainAccess" "v3.0.0"
 github "onevcat/Kingfisher" "3.1.4"
 github "Hearst-DD/ObjectMapper" "2.1.0"

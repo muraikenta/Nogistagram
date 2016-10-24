@@ -143,6 +143,23 @@
             </objects>
             <point key="canvasLocation" x="462" y="1540"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="3pl-b7-76B">
+            <objects>
+                <navigationController id="ix1-vn-Hqd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pOG-8P-RJg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9z0-o8-j64">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ke8-q5-fFx" kind="relationship" relationship="rootViewController" id="c00-YW-ddK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvx-Nf-k6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="-1194"/>
+        </scene>
         <!--Home Table View Controller-->
         <scene sceneID="ejN-zC-9rr">
             <objects>
@@ -153,7 +170,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="451" id="eSj-Jz-tDD" customClass="PostTableViewCell" customModule="Nogistagram" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="451"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="451"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSj-Jz-tDD" id="XAt-0P-eTm">
                                     <frame key="frameInset" width="375" height="450"/>
@@ -209,10 +226,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="Syr-2o-wAU"/>
+                    <navigationItem key="navigationItem" id="cwj-it-EgG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9Z-h6-mPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="461.60000000000002" y="-1191.4542728635683"/>
+            <point key="canvasLocation" x="1190" y="-1194"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2W0-aZ-bw4">
@@ -224,7 +242,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ke8-q5-fFx" kind="relationship" relationship="viewControllers" id="Jn4-Fz-Yph"/>
+                        <segue destination="ix1-vn-Hqd" kind="relationship" relationship="viewControllers" id="mx9-Fo-cpR"/>
                         <segue destination="qE2-OB-nhO" kind="relationship" relationship="viewControllers" id="Emk-Ja-0cx"/>
                         <segue destination="bXk-1R-IBe" kind="relationship" relationship="viewControllers" id="dD6-S2-rsb"/>
                         <segue destination="XTO-I7-7jO" kind="relationship" relationship="viewControllers" id="y8Z-Uy-9Fj"/>
