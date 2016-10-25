@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
+    
+    var post: Post = Post() {
+        didSet {
+            render()
+        }
+    }
     
     // MARK: Properties
     @IBOutlet weak var userImageView: UIImageView!
@@ -25,6 +32,16 @@ class PostTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func render() {
+        let user: User = post.user!
+        self.userNameLabel.text = user.uniqueName
+        self.postImageView.kf.setImage(with: URL(string: post.imageUrl))
+        self.postBodyTextView.text = post.body
+        self.userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
+            self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
+        })
     }
 
 }
