@@ -40,9 +40,7 @@ class PostTableViewCell: UITableViewCell {
         self.postImageView.kf.setImage(with: URL(string: post.imageUrl))
         self.postBodyTextView.text = post.body
         self.userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
-            print(self.userImageView.frame.height / 2)
             self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
-            print(self.userImageView.layer.cornerRadius)
         })
     }
 
