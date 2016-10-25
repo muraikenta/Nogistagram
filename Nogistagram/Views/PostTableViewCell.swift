@@ -51,18 +51,17 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
-        // let method = post.isLiked ? ".delete" : ".post"
-        if let authToken = SessionHelper.authDict() {
+        let method: HTTPMethod = post.isLiked ? .delete : .post
+        if let authDict = SessionHelper.authDict() {
             Alamofire
-                .request("\(Constant.Api.root)/likes", method: post.isLiked ? .delete : .post, parameters: ["post_id" : post.id], headers: authToken)
+                .request("\(Constant.Api.root)/likes", method: method, parameters: ["post_id" : post.id], headers: authDict)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
                     case .success(let value):
                         let postJson = JSON(value)
-                        let post = Mapper<Post>().map(JSON: postJson.object as! [String : Any])!
-                        post.save()
-                        self.post = post
+                        self.post = Mapper<Post>().map(JSON: postJson.object as! [String : Any])!
+                        self.post.save()
                     case .failure(let error):
                         print(error)
                     }
