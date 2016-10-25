@@ -27,6 +27,10 @@ class UserViewController: UIViewController {
         user.save()
         render()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        userImageView.setCircleWebImage(str: user.imageUrl)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,7 +39,6 @@ class UserViewController: UIViewController {
     
     func render() {
         self.title = user.uniqueName
-        userImageView.kf.setImage(with: URL(string: user.imageUrl))
         userNameLabel.text = user.name
         userIntroductionLabel.text = user.introduction
         userWebsiteLabel.text = user.website
