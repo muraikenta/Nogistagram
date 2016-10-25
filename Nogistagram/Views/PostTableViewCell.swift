@@ -8,6 +8,9 @@
 
 import UIKit
 import Kingfisher
+import Alamofire
+import SwiftyJSON
+import ObjectMapper
 
 class PostTableViewCell: UITableViewCell {
     
@@ -22,6 +25,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postBodyTextView: UITextView!
+    @IBOutlet weak var likeButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,10 +40,33 @@ class PostTableViewCell: UITableViewCell {
     
     func render() {
         let user: User = post.user!
-        self.userNameLabel.text = user.uniqueName
-        self.postImageView.kf.setImage(with: URL(string: post.imageUrl))
-        self.postBodyTextView.text = post.body
-        self.userImageView.setCircleWebImage(str: user.imageUrl)
+        userNameLabel.text = user.uniqueName
+        postImageView.kf.setImage(with: URL(string: post.imageUrl))
+        postBodyTextView.text = post.body
+        userImageView.setCircleWebImage(str: user.imageUrl)
+        let likeButtonImageName = post.isLiked ? "filledHeart" : "emptyHeart"
+        likeButton.setImage(UIImage(named: likeButtonImageName), for: UIControlState.normal)
     }
-
+    
+    @IBAction func likeButtonTapped(_ sender: UIButton) {
+        let method: HTTPMethod = post.isLiked ? .delete : .post
+        if let authDict = SessionHelper.authDict() {
+            Alamofire
+                .request("\(Constant.Api.root)/likes", method: method, parameters: ["post_id" : post.id], headers: authDict)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        let postJson = JSON(value)
+                        self.post = Mapper<Post>().map(JSON: postJson.object as! [String : Any])!
+                        self.post.save()
+                    case .failure(let error):
+                        print(error)
+                    }
+                    
+            }
+        } else {
+            print("Error: authToken is nil")
+        }
+    }
 }

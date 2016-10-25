@@ -32,7 +32,7 @@ class Post: Object, Mappable {
         user <- map["user"]
         imageUrl <- map["image_url"]
         body <- map["body"]
-        isLiked <- map["isLiked"]
+        isLiked <- map["is_liked"]
         
         if let createdAtString = map["created_at"].currentValue as? String {
             let formatter: DateFormatter = DateFormatter()
