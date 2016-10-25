@@ -31,7 +31,7 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -43,9 +43,7 @@ class PostTableViewCell: UITableViewCell {
         userNameLabel.text = user.uniqueName
         postImageView.kf.setImage(with: URL(string: post.imageUrl))
         postBodyTextView.text = post.body
-        userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
-            self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
-        })
+        userImageView.setCircleWebImage(str: user.imageUrl)
         let likeButtonImageName = post.isLiked ? "filledHeart" : "emptyHeart"
         likeButton.setImage(UIImage(named: likeButtonImageName), for: UIControlState.normal)
     }

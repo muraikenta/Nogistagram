@@ -35,6 +35,8 @@ class SearchResultTableViewCell: UITableViewCell {
     func render() {
         userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
             self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
         })
         uniqueNameLabel.text = user.uniqueName
         userNameLabel.text = user.name
