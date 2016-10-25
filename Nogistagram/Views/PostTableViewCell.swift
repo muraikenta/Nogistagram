@@ -27,7 +27,7 @@ class PostTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -39,9 +39,7 @@ class PostTableViewCell: UITableViewCell {
         self.userNameLabel.text = user.uniqueName
         self.postImageView.kf.setImage(with: URL(string: post.imageUrl))
         self.postBodyTextView.text = post.body
-        self.userImageView.kf.setImage(with: URL(string: user.imageUrl), placeholder: UIImage(named: "setting"), options: nil, progressBlock: nil, completionHandler: { image, error, cacheType, imageURL in
-            self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
-        })
+        self.userImageView.setCircleWebImage(str: user.imageUrl)
     }
 
 }
