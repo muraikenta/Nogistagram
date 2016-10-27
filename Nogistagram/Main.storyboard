@@ -220,10 +220,14 @@
                                             <frame key="frameInset" minX="8" minY="287" width="35" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="emptyHeart"/>
+                                            <connections>
+                                                <action selector="likeButtonTapped:" destination="eSj-Jz-tDD" eventType="touchUpInside" id="tLe-Yv-fib"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="likeButton" destination="MLy-34-S01" id="ovB-61-bQ1"/>
                                     <outlet property="postBodyTextView" destination="YtR-5B-6eN" id="tly-RX-Bvd"/>
                                     <outlet property="postImageView" destination="jsd-ve-L17" id="Yef-r3-CuK"/>
                                     <outlet property="userImageView" destination="K1O-pm-830" id="JUn-Rz-4oR"/>
