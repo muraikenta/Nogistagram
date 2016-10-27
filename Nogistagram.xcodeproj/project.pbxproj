@@ -17,13 +17,16 @@
 		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
 		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
 		242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */; };
-		246BD52D1DBE2F630033C92A /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BD52C1DBE2F630033C92A /* PostCollectionViewCell.swift */; };
 		246BD52F1DBE33CB0033C92A /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BD52E1DBE33CB0033C92A /* UICollectionView+.swift */; };
 		2472C7461DBCAEE700094B28 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7451DBCAEE700094B28 /* Realm+.swift */; };
 		2472C74A1DBCB8FF00094B28 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7491DBCB8FF00094B28 /* RealmHelper.swift */; };
 		2472C74C1DBCBB8500094B28 /* SessionSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C74B1DBCBB8500094B28 /* SessionSaver.swift */; };
 		2472C74F1DBCC3D500094B28 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C74E1DBCC3D500094B28 /* UserViewController.swift */; };
 		2472C7511DBCD5D100094B28 /* StoryBoardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7501DBCD5D100094B28 /* StoryBoardInstantiatable.swift */; };
+		24777DE81DC17A00006BD17B /* PostCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24777DE71DC17A00006BD17B /* PostCollectionView.swift */; };
+		24777DEC1DC17B4D006BD17B /* PostCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24777DEB1DC17B4D006BD17B /* PostCollectionView.xib */; };
+		24777DF31DC17DF8006BD17B /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24777DF11DC17DF8006BD17B /* PostCollectionViewCell.swift */; };
+		24777DF41DC17DF8006BD17B /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24777DF21DC17DF8006BD17B /* PostCollectionViewCell.xib */; };
 		24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Login.storyboard */; };
@@ -95,13 +98,16 @@
 		242FC0941DA65337008B23AB /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		242FC0961DA66698008B23AB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueNameRegistrationViewController.swift; sourceTree = "<group>"; };
-		246BD52C1DBE2F630033C92A /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		246BD52E1DBE33CB0033C92A /* UICollectionView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		2472C7451DBCAEE700094B28 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		2472C7491DBCB8FF00094B28 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		2472C74B1DBCBB8500094B28 /* SessionSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionSaver.swift; sourceTree = "<group>"; };
 		2472C74E1DBCC3D500094B28 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2472C7501DBCD5D100094B28 /* StoryBoardInstantiatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryBoardInstantiatable.swift; path = ../Protocols/StoryBoardInstantiatable.swift; sourceTree = "<group>"; };
+		24777DE71DC17A00006BD17B /* PostCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionView.swift; sourceTree = "<group>"; };
+		24777DEB1DC17B4D006BD17B /* PostCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCollectionView.xib; sourceTree = "<group>"; };
+		24777DF11DC17DF8006BD17B /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		24777DF21DC17DF8006BD17B /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -315,7 +321,10 @@
 				24C97B411DB64DFD001488A2 /* PostTableViewCell.swift */,
 				24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */,
 				24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */,
-				246BD52C1DBE2F630033C92A /* PostCollectionViewCell.swift */,
+				24777DE71DC17A00006BD17B /* PostCollectionView.swift */,
+				24777DEB1DC17B4D006BD17B /* PostCollectionView.xib */,
+				24777DF11DC17DF8006BD17B /* PostCollectionViewCell.swift */,
+				24777DF21DC17DF8006BD17B /* PostCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -458,6 +467,8 @@
 				FC0966751DA272D400433A4C /* .keep in Resources */,
 				24C97B371DB103E2001488A2 /* FSVideoCameraView.xib in Resources */,
 				24E26BA21DB0E9E500AFA159 /* NewPostDetailViewController.xib in Resources */,
+				24777DF41DC17DF8006BD17B /* PostCollectionViewCell.xib in Resources */,
+				24777DEC1DC17B4D006BD17B /* PostCollectionView.xib in Resources */,
 				2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */,
 				24C97B551DB9067A001488A2 /* SearchResultTableViewCell.xib in Resources */,
 				24E26B951DAA0D6A00AFA159 /* Main.storyboard in Resources */,
@@ -520,8 +531,10 @@
 				24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				2472C7511DBCD5D100094B28 /* StoryBoardInstantiatable.swift in Sources */,
+				24777DE81DC17A00006BD17B /* PostCollectionView.swift in Sources */,
 				FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */,
 				24C97B481DB90044001488A2 /* ExploreViewController.swift in Sources */,
+				24777DF31DC17DF8006BD17B /* PostCollectionViewCell.swift in Sources */,
 				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
 				246BD52F1DBE33CB0033C92A /* UICollectionView+.swift in Sources */,
 				24C97B351DB103E2001488A2 /* FSImageCropView.swift in Sources */,
@@ -534,7 +547,6 @@
 				FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */,
 				FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */,
 				2472C74C1DBCBB8500094B28 /* SessionSaver.swift in Sources */,
-				246BD52D1DBE2F630033C92A /* PostCollectionViewCell.swift in Sources */,
 				FC442D1C1DB35F0900A1D17A /* HomeTableViewController.swift in Sources */,
 				24C97B401DB4E0F8001488A2 /* CustomFusumaViewController.swift in Sources */,
 				24C97B541DB9067A001488A2 /* SearchResultTableViewCell.swift in Sources */,

@@ -17,6 +17,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userIntroductionLabel: UILabel!
     @IBOutlet weak var userWebsiteLabel: UILabel!
+    @IBOutlet weak var postCollectionWrapper: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,11 @@ class UserViewController: UIViewController {
         
         user = user ?? SessionHelper.currentUser()!
         user.save()
-        render()
+        renderUserData()
+        
+        let postCollectionView = PostCollectionView.instantiate()
+        postCollectionView.frame = postCollectionWrapper.bounds
+        postCollectionWrapper.addSubview(postCollectionView) 
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,7 +42,7 @@ class UserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func render() {
+    func renderUserData() {
         self.title = user.uniqueName
         userNameLabel.text = user.name
         userIntroductionLabel.text = user.introduction
