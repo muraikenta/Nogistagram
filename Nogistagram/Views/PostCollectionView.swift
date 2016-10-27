@@ -13,7 +13,13 @@ import ObjectMapper
 
 class PostCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var posts: [Post] = []
+    var posts: [Post] = [] {
+        didSet {
+            self.collectionView.reloadData()
+            self.collectionView.adaptBeautifulGrid(numberOfGridsPerRow: 3, gridLineSpace: 2.0)
+        }
+    }
+    
     let cellIdentifier = "PostCollectionCell"
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,33 +30,6 @@ class PostCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDe
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.register(UINib(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
-        self.loadPosts()
-    }
-    
-    func loadPosts() {
-        if let authDict = SessionHelper.authDict() {
-            Alamofire
-                .request("\(Constant.Api.root)/posts", method: .get, headers: authDict)
-                .validate(statusCode: 200..<300)
-                .responseJSON { response in
-                    switch response.result {
-                    case .success(let value):
-                        let postJsons = JSON(value)
-                        for (_, postJson) in postJsons {
-                            let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
-                            post.save()
-                        }
-                        self.posts = Post.all()
-                        self.collectionView.reloadData()
-                        self.collectionView.adaptBeautifulGrid(numberOfGridsPerRow: 3, gridLineSpace: 2.0)
-                    case .failure(let error):
-                        print(error)
-                    }
-                    
-            }
-        } else {
-            print("Error: authToken is nil")
-        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

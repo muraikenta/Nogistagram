@@ -7,11 +7,14 @@
 //
 
 import UIKit
-import Kingfisher
+import Alamofire
+import SwiftyJSON
+import ObjectMapper
 
 class UserViewController: UIViewController {
     
     var user: User!
+    var postCollectionView = PostCollectionView()
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -24,17 +27,19 @@ class UserViewController: UIViewController {
 
         navigationController?.navigationBar.isHidden = false
         
-        user = user ?? SessionHelper.currentUser()!
-        user.save()
-        renderUserData()
+        self.user = self.user ?? SessionHelper.currentUser()!
+        self.user.save()
+        self.renderUserData()
         
-        let postCollectionView = PostCollectionView.instantiate()
-        postCollectionView.frame = postCollectionWrapper.bounds
-        postCollectionWrapper.addSubview(postCollectionView) 
+        self.postCollectionView = PostCollectionView.instantiate()
+        self.postCollectionView.frame = self.postCollectionWrapper.bounds
+        self.postCollectionWrapper.addSubview(self.postCollectionView)
+        
+        self.loadPosts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        userImageView.setCircleWebImage(str: user.imageUrl)
+        self.userImageView.setCircleWebImage(str: user.imageUrl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,20 +49,35 @@ class UserViewController: UIViewController {
     
     func renderUserData() {
         self.title = user.uniqueName
-        userNameLabel.text = user.name
-        userIntroductionLabel.text = user.introduction
-        userWebsiteLabel.text = user.website
+        self.userNameLabel.text = self.user.name
+        self.userIntroductionLabel.text = self.user.introduction
+        self.userWebsiteLabel.text = self.user.website
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadPosts() {
+        if let authDict = SessionHelper.authDict() {
+            Alamofire
+                .request("\(Constant.Api.root)/posts", method: .get, parameters: ["user_id": self.user.id], headers: authDict)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        let postJsons = JSON(value)
+                        for (_, postJson) in postJsons {
+                            let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
+                            post.save()
+                            self.user.write(block: { _ in self.user.posts.append(post) })
+                        }
+                        self.postCollectionView.posts = Array(self.user.posts)
+                    case .failure(let error):
+                        print(error)
+                    }
+                    
+            }
+        } else {
+            print("Error: authToken is nil")
+        }
     }
-    */
 
 }

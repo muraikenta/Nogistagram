@@ -14,6 +14,7 @@ class RealmHelper {
     static func purge() {
         do {
             try FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
+            print("purged realm")
         } catch {
             print(error)
         }

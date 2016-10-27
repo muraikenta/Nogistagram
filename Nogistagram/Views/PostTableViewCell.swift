@@ -35,10 +35,10 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func render() {
-        let user: User = post.user!
+        let user: User = self.post.user!
         self.userNameLabel.text = user.uniqueName
-        self.postImageView.kf.setImage(with: URL(string: post.imageUrl))
-        self.postBodyTextView.text = post.body
+        self.postImageView.kf.setImage(with: URL(string: self.post.imageUrl))
+        self.postBodyTextView.text = self.post.body
         self.userImageView.setCircleWebImage(str: user.imageUrl)
     }
 
