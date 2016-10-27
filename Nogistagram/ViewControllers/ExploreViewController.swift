@@ -7,17 +7,12 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import ObjectMapper
-import Kingfisher
 
 class ExploreViewController: UIViewController {
     
     var posts: [Post] = []
 
     @IBOutlet weak var postCollectionWrapper: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
