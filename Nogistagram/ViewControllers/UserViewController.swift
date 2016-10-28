@@ -67,7 +67,9 @@ class UserViewController: UIViewController {
                         for (_, postJson) in postJsons {
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
-                            self.user.write(block: { _ in self.user.posts.append(post) })
+                            if self.user.posts.filter(NSPredicate(format: "id = \(post.id)")).isEmpty {
+                                self.user.write(block: { _ in self.user.posts.append(post) })
+                            }
                         }
                         self.postCollectionView.posts = Array(self.user.posts)
                     case .failure(let error):
