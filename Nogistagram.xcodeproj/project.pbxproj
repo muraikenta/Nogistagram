@@ -63,6 +63,7 @@
 		FC09667C1DA2751800433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667B1DA2751800433A4C /* .keep */; };
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
+		FC0D23E71DC6301400BE360A /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D23E61DC6301400BE360A /* CommentTableViewController.swift */; };
 		FC2C04121DBA1FF700359E79 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */; };
 		FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582191DAA1E6900F7983E /* Regexp.swift */; };
 		FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */; };
@@ -143,6 +144,7 @@
 		FC09667B1DA2751800433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC0D23E61DC6301400BE360A /* CommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
 		FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		FC3582191DAA1E6900F7983E /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
 				2472C74E1DBCC3D500094B28 /* UserViewController.swift */,
+				FC0D23E61DC6301400BE360A /* CommentTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
 				2472C7511DBCD5D100094B28 /* StoryBoardInstantiatable.swift in Sources */,
+				FC0D23E71DC6301400BE360A /* CommentTableViewController.swift in Sources */,
 				FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */,
 				24C97B481DB90044001488A2 /* ExploreViewController.swift in Sources */,
 				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
