@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+import ObjectMapper
 
 class CommentTableViewController: UITableViewController {
-
+    
+    // MARK: Properties
+    @IBOutlet weak var commentField: UITextField!
+    
+    var post: Post!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -94,5 +102,31 @@ class CommentTableViewController: UITableViewController {
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: false, completion: nil)
     }
-
+    
+    @IBAction func comment(_ sender: UIBarButtonItem) {
+        if let body: String = self.commentField.text {
+            let params: [String : Any] = ["post_id" : self.post.id, "body" : body]
+            if let authDict = SessionHelper.authDict() {
+                Alamofire
+                    .request("\(Constant.Api.root)/comments", method: .post, parameters: params, headers: authDict)
+                    .validate(statusCode: 200..<300)
+                    .responseJSON { response in
+                        switch response.result {
+                        case .success(let value):
+                            let postJson = JSON(value)
+                            //self.post = Mapper<Post>().map(JSON: postJson.object as! [String : Any])!
+                            //self.post.save()
+                            print(postJson)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+            } else {
+                print("Error: authToken is nil")
+            }
+        } else {
+            // TODO: viewModelでvalidation？
+            print("body does not exist")
+        }
+    }
 }

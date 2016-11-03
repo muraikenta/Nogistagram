@@ -223,12 +223,13 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="comment"/>
                                             <connections>
-                                                <segue destination="Wlt-Mm-SrE" kind="show" id="Xry-y1-KSd"/>
+                                                <segue destination="Wlt-Mm-SrE" kind="show" identifier="toCommentTable" id="Xry-y1-KSd"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="commentButton" destination="s6p-3o-Ip6" id="jyW-5r-adL"/>
                                     <outlet property="likeButton" destination="MLy-34-S01" id="ovB-61-bQ1"/>
                                     <outlet property="postBodyTextView" destination="YtR-5B-6eN" id="tly-RX-Bvd"/>
                                     <outlet property="postImageView" destination="jsd-ve-L17" id="Yef-r3-CuK"/>
@@ -456,12 +457,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oLq-zF-2cQ">
+                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="↗" id="0vH-lJ-Hoi"/>
+                                <barButtonItem style="plain" id="0he-qm-8wo">
+                                    <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメント..." textAlignment="natural" minimumFontSize="17" id="ZBB-GU-drU">
+                                        <rect key="frame" x="41" y="7" width="239" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </barButtonItem>
+                                <barButtonItem title="投稿する" id="D3h-Sm-7Y5">
+                                    <connections>
+                                        <action selector="comment:" destination="1tm-a0-BEn" id="hwc-dd-m98"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dWU-gr-m3r">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dWU-gr-m3r" id="AJ8-f7-pvY">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -478,10 +500,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commentField" destination="ZBB-GU-drU" id="yFx-vP-EeV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFc-MP-8qg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="-1189"/>
+            <point key="canvasLocation" x="2604" y="-1189.6551724137933"/>
         </scene>
         <!--Paging Menu Controller-->
         <scene sceneID="9IN-4n-iCG">

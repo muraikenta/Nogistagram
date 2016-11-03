@@ -89,6 +89,13 @@ extension RealmType where Self: Object {
         }
         return []
     }
+    
+    static func find(_ primaryKey: Int) -> Self? {
+        if let realm = try? Realm() {
+            return realm.object(ofType: Self.self, forPrimaryKey: primaryKey)!
+        }
+        return nil
+    }
 }
 
 

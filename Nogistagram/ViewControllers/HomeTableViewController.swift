@@ -78,6 +78,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
         cell.post = posts[indexPath.row]
+        cell.commentButton.tag = posts[indexPath.row].id
         return cell
     }
 
@@ -125,5 +126,15 @@ class HomeTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationController: UIViewController = segue.destination
+        switch segue.identifier! {
+        case "toCommentTable":
+            let commentTableViewController = (destinationController as! UINavigationController).topViewController as! CommentTableViewController
+            let commentButton = sender as! UIButton
+            commentTableViewController.post = Post.find(commentButton.tag)
+        default:
+            break
+        }
+    }
 }
