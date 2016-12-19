@@ -28,6 +28,8 @@
 		24777DF31DC17DF8006BD17B /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24777DF11DC17DF8006BD17B /* PostCollectionViewCell.swift */; };
 		24777DF41DC17DF8006BD17B /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24777DF21DC17DF8006BD17B /* PostCollectionViewCell.xib */; };
 		24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */; };
+		2481F88A1E080F5700C69D00 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2481F8881E080E4900C69D00 /* SwiftyJSON.framework */; };
+		2481F88B1E081B4100C69D00 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2491A87C1DA10DA500C552EB /* AppDelegate.swift */; };
 		2491A8821DA10DA500C552EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Login.storyboard */; };
 		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
@@ -76,13 +78,11 @@
 		FC442D1F1DB37B4F00A1D17A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1D1DB37B4F00A1D17A /* Realm.framework */; };
 		FC442D201DB37B4F00A1D17A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC442D1E1DB37B4F00A1D17A /* RealmSwift.framework */; };
 		FC49B56F1DBE188600DBE012 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC49B56E1DBE188600DBE012 /* FontAwesome.framework */; };
-		FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038EE1DA7B58D00D5BC81 /* KeychainAccess.framework */; };
 		FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5038F01DA7BEA200D5BC81 /* AccountRegistrationViewController.swift */; };
 		FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5038F21DA8CC1C00D5BC81 /* Dollar.framework */; };
 		FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */; };
 		FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */; };
 		FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */; };
-		FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */; };
 		FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF36B1DB4EE0100BBF3BA /* Session.swift */; };
 		FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +109,7 @@
 		24777DF11DC17DF8006BD17B /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		24777DF21DC17DF8006BD17B /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PagingMenuController.framework; path = Carthage/Build/iOS/PagingMenuController.framework; sourceTree = "<group>"; };
+		2481F8881E080E4900C69D00 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		2491A8791DA10DA500C552EB /* Nogistagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nogistagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2491A87C1DA10DA500C552EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2491A8811DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		FC5A71CB1DA6502E00F58C4A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		FC5CF36B1DB4EE0100BBF3BA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +176,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2481F88B1E081B4100C69D00 /* KeychainAccess.framework in Frameworks */,
+				2481F88A1E080F5700C69D00 /* SwiftyJSON.framework in Frameworks */,
 				FC49B56F1DBE188600DBE012 /* FontAwesome.framework in Frameworks */,
 				24814CD31DBA1DD1006A9840 /* PagingMenuController.framework in Frameworks */,
 				24C97B461DB659DC001488A2 /* Kingfisher.framework in Frameworks */,
@@ -184,7 +186,6 @@
 				FC3582201DAA368800F7983E /* RxCocoa.framework in Frameworks */,
 				FC35821E1DAA358B00F7983E /* RxSwift.framework in Frameworks */,
 				FC5038F31DA8CC1C00D5BC81 /* Dollar.framework in Frameworks */,
-				FC5038EF1DA7B58D00D5BC81 /* KeychainAccess.framework in Frameworks */,
 				242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */,
 				242FC0911DA65071008B23AB /* FBSDKLoginKit.framework in Frameworks */,
 				242FC08E1DA64F8E008B23AB /* FBSDKCoreKit.framework in Frameworks */,
@@ -192,7 +193,6 @@
 				242FC08B1DA64D8D008B23AB /* FacebookCore.framework in Frameworks */,
 				242FC08C1DA64D8D008B23AB /* FacebookLogin.framework in Frameworks */,
 				FC5A71D21DA65F0A00F58C4A /* ObjectMapper.framework in Frameworks */,
-				FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */,
 				FC5A71CF1DA65EEE00F58C4A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +203,7 @@
 		242FC0861DA64D8D008B23AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2481F8881E080E4900C69D00 /* SwiftyJSON.framework */,
 				FC49B56E1DBE188600DBE012 /* FontAwesome.framework */,
 				24814CD21DBA1DD1006A9840 /* PagingMenuController.framework */,
 				24C97B451DB659DC001488A2 /* Kingfisher.framework */,
@@ -385,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				FC5A71D01DA65F0A00F58C4A /* ObjectMapper.framework */,
-				FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */,
 				FC5A71CE1DA65EEE00F58C4A /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -500,7 +500,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
@@ -510,6 +509,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PagingMenuController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FontAwesome.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);

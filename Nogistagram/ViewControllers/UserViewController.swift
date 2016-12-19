@@ -58,7 +58,7 @@ class UserViewController: UIViewController {
     func loadPosts() {
         if let authDict = SessionHelper.authDict() {
             Alamofire
-                .request("\(Constant.Api.root)/posts", method: .get, parameters: ["user_id": self.user.id], headers: authDict)
+                .request("\(Constant.Api.root)/users/\(self.user.id)/posts", method: .get, headers: authDict)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
