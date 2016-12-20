@@ -64,6 +64,7 @@
 		FC09667E1DA2754F00433A4C /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = FC09667D1DA2754F00433A4C /* .keep */; };
 		FC0966801DA27B2D00433A4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09667F1DA27B2D00433A4C /* LoginViewController.swift */; };
 		FC0D23E71DC6301400BE360A /* CommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D23E61DC6301400BE360A /* CommentTableViewController.swift */; };
+		FC226CCE1DCB1FB5000D1FFF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC226CCD1DCB1FB5000D1FFF /* Comment.swift */; };
 		FC2C04121DBA1FF700359E79 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */; };
 		FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3582191DAA1E6900F7983E /* Regexp.swift */; };
 		FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */; };
@@ -83,6 +84,8 @@
 		FC5A71D31DA65F0A00F58C4A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */; };
 		FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5CF36B1DB4EE0100BBF3BA /* Session.swift */; };
 		FC61CDED1DB4DA7C00015239 /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */; };
+		FCE7AA931DCB37C3008A1030 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE7AA921DCB37C3008A1030 /* DateHelper.swift */; };
+		FCE7AA951DCB40D9008A1030 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE7AA941DCB40D9008A1030 /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +148,7 @@
 		FC09667D1DA2754F00433A4C /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		FC09667F1DA27B2D00433A4C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC0D23E61DC6301400BE360A /* CommentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewController.swift; sourceTree = "<group>"; };
+		FC226CCD1DCB1FB5000D1FFF /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FC2C04111DBA1FF700359E79 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		FC3582191DAA1E6900F7983E /* Regexp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		FC35821B1DAA246E00F7983E /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		FC5A71D11DA65F0A00F58C4A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		FC5CF36B1DB4EE0100BBF3BA /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
+		FCE7AA921DCB37C3008A1030 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		FCE7AA941DCB40D9008A1030 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +324,7 @@
 				24C97B521DB9067A001488A2 /* SearchResultTableViewCell.swift */,
 				24C97B531DB9067A001488A2 /* SearchResultTableViewCell.xib */,
 				246BD52C1DBE2F630033C92A /* PostCollectionViewCell.swift */,
+				FCE7AA941DCB40D9008A1030 /* CommentTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +336,7 @@
 				24C97B431DB64FAA001488A2 /* Post.swift */,
 				FC5CF36B1DB4EE0100BBF3BA /* Session.swift */,
 				2404BE1C1DBA33DF00D57AF4 /* User.swift */,
+				FC226CCD1DCB1FB5000D1FFF /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +379,7 @@
 				FC3582191DAA1E6900F7983E /* Regexp.swift */,
 				FC61CDEC1DB4DA7C00015239 /* SessionHelper.swift */,
 				2472C7491DBCB8FF00094B28 /* RealmHelper.swift */,
+				FCE7AA921DCB37C3008A1030 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -519,6 +528,7 @@
 				24C97B4A1DB90057001488A2 /* SearchViewController.swift in Sources */,
 				24E26B981DAA1C6100AFA159 /* FacebookLoginable.swift in Sources */,
 				24E26BA71DB0F43300AFA159 /* NibInstantiatable.swift in Sources */,
+				FCE7AA951DCB40D9008A1030 /* CommentTableViewCell.swift in Sources */,
 				24C97B271DB103CE001488A2 /* FSAlbumView.swift in Sources */,
 				24C97B3C1DB10499001488A2 /* FusumaViewController.swift in Sources */,
 				FC5A71CC1DA6502E00F58C4A /* RegistrationViewController.swift in Sources */,
@@ -531,6 +541,7 @@
 				24C97B351DB103E2001488A2 /* FSImageCropView.swift in Sources */,
 				24E26B931DA9EA5800AFA159 /* Constant.swift in Sources */,
 				2472C74A1DBCB8FF00094B28 /* RealmHelper.swift in Sources */,
+				FCE7AA931DCB37C3008A1030 /* DateHelper.swift in Sources */,
 				FC5038F11DA7BEA200D5BC81 /* AccountRegistrationViewController.swift in Sources */,
 				FC5CF36C1DB4EE0100BBF3BA /* Session.swift in Sources */,
 				2472C7461DBCAEE700094B28 /* Realm+.swift in Sources */,
@@ -547,6 +558,7 @@
 				24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
+				FC226CCE1DCB1FB5000D1FFF /* Comment.swift in Sources */,
 				241D92C81DBF75600012F66A /* UIImageView+.swift in Sources */,
 				24E26BA51DB0F25800AFA159 /* NSObject+.swift in Sources */,
 				24E26BA11DB0E9E500AFA159 /* NewPostDetailViewController.swift in Sources */,
