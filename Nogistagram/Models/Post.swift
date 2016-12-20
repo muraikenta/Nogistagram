@@ -17,6 +17,7 @@ class Post: Object, Mappable {
     dynamic var body = ""
     dynamic var createdAt: Date?
     dynamic var isLiked: Bool = false
+    var comments = List<Comment>()
 
     override static func primaryKey() -> String? {
         return "id"

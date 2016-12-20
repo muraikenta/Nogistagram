@@ -45,6 +45,19 @@ class HomeTableViewController: UITableViewController {
                         for (_, postJson) in postJsons {
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
+                            for (_, commentJson) in postJson["comments"] {
+                                if let comment = Mapper<Comment>().map(JSON: commentJson.dictionaryObject!) {
+                                    comment.save()
+                                    let user = Mapper<User>().map(JSON: commentJson["user"].dictionaryObject!)!
+                                    user.save()
+                                    if post.comments.filter(NSPredicate(format: "id = \(comment.id)")).isEmpty {
+                                        post.write(block: { _ in post.comments.append(comment) })
+                                    }
+                                    if user.comments.filter(NSPredicate(format: "id = \(comment.id)")).isEmpty {
+                                      user.write(block: { _ in user.comments.append(comment) })
+                                    }
+                                }
+                            }
                         }
                         self.posts = Post.all()
                         self.tableView.reloadData()
