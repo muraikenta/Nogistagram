@@ -8,24 +8,29 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import ObjectMapper
-import Kingfisher
+import SwiftyJSON
 
-class ExploreViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ExploreViewController: UIViewController {
     
     var posts: [Post] = []
+    var postCollectionView = PostCollectionView()
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var postCollectionWrapper: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPosts()
+        
+        self.postCollectionView = PostCollectionView.instantiate()
+        self.postCollectionView.frame = self.postCollectionWrapper.bounds
+        self.postCollectionWrapper.addSubview(self.postCollectionView)
+        
+        self.loadPosts()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +40,9 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func loadPosts() {
         if let authDict = SessionHelper.authDict() {
+            // TODO: おすすめの投稿を取り出す
             Alamofire
-                .request("\(Constant.Api.root)/posts", method: .get, headers: authDict)
+                .request("\(Constant.Api.root)/posts/timeline", method: .get, headers: authDict)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
@@ -46,9 +52,7 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
                         }
-                        self.posts = Post.all()
-                        self.collectionView.reloadData()
-                        self.collectionView.adaptBeautifulGrid(numberOfGridsPerRow: 3, gridLineSpace: 2.0)
+                        self.postCollectionView.posts = Post.all()
                     case .failure(let error):
                         print(error)
                     }
@@ -59,20 +63,4 @@ class ExploreViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionCell", for: indexPath) as! PostCollectionViewCell
-        let post = posts[indexPath.row]
-        cell.postImageView.kf.setImage(with: URL(string: post.imageUrl))
-        return cell
-    }
-    
-
 }

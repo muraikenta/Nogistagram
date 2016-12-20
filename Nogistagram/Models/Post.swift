@@ -12,11 +12,15 @@ import ObjectMapper
 
 class Post: Object, Mappable {
     dynamic var id: Int = 0
-    dynamic var user: User?
     dynamic var imageUrl =  ""
     dynamic var body = ""
     dynamic var createdAt: Date?
     dynamic var isLiked: Bool = false
+    
+    let users = LinkingObjects(fromType: User.self, property: "posts")
+    dynamic var user: User? {
+        return self.users.first
+    }
 
     override static func primaryKey() -> String? {
         return "id"
@@ -28,16 +32,15 @@ class Post: Object, Mappable {
     }
     
     func mapping(map: Map) {
-        id <- map["id"]
-        user <- map["user"]
-        imageUrl <- map["image_url"]
-        body <- map["body"]
-        isLiked <- map["is_liked"]
+        self.id <- map["id"]
+        self.imageUrl <- map["image_url"]
+        self.body <- map["body"]
+        self.isLiked <- map["is_liked"]
         
         if let createdAtString = map["created_at"].currentValue as? String {
             let formatter: DateFormatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            createdAt = formatter.date(from: createdAtString)
+            self.createdAt = formatter.date(from: createdAtString)
         }
     }
     

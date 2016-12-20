@@ -39,13 +39,14 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func render() {
-        let user: User = post.user!
-        userNameLabel.text = user.uniqueName
-        postImageView.kf.setImage(with: URL(string: post.imageUrl))
-        postBodyTextView.text = post.body
-        userImageView.setCircleWebImage(str: user.imageUrl)
+        if let user = self.post.user {
+            userNameLabel.text = user.uniqueName
+            userImageView.setCircleWebImage(str: user.imageUrl)
+        }
+        postImageView.kf.setImage(with: URL(string: self.post.imageUrl))
+        postBodyTextView.text = self.post.body
         let likeButtonImageName = post.isLiked ? "filledHeart" : "emptyHeart"
-        likeButton.setImage(UIImage(named: likeButtonImageName), for: UIControlState.normal)
+        likeButton.setImage(UIImage(named: likeButtonImageName), for: .normal)
     }
     
     @IBAction func likeButtonTapped(_ sender: UIButton) {
@@ -58,7 +59,7 @@ class PostTableViewCell: UITableViewCell {
                     switch response.result {
                     case .success(let value):
                         let postJson = JSON(value)
-                        self.post = Mapper<Post>().map(JSON: postJson.object as! [String : Any])!
+                        self.post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                         self.post.save()
                     case .failure(let error):
                         print(error)

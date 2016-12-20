@@ -20,6 +20,7 @@ class User: Object, Mappable {
     dynamic var gender: Int = 0
     dynamic var imageUrl: String = ""
     dynamic var privacyType: Int = 0
+    let posts = List<Post>()
     
     override static func primaryKey() -> String? {
         return "id"
