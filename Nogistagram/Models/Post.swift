@@ -36,10 +36,9 @@ class Post: Object, Mappable {
         isLiked <- map["is_liked"]
         
         if let createdAtString = map["created_at"].currentValue as? String {
-            let formatter: DateFormatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-            createdAt = formatter.date(from: createdAtString)
+            createdAt = DateHelper.date(fromString: createdAtString, format: "yyyy-MM-dd'T'HH:mm:ss.SSSZ")
         }
+        
     }
     
     static func all() -> [Post] {
