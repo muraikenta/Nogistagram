@@ -62,6 +62,8 @@ class SettingsTableViewController: UITableViewController {
             
             AccessToken.current = nil
             
+            Session.all().delete()
+            
             let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
             let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.present(loginViewController, animated: true, completion: nil)

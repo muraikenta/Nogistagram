@@ -46,7 +46,6 @@ extension RealmType where Self: Object {
             self.save()
         }
     }
-    
 }
 
 extension Array where Element: Object {

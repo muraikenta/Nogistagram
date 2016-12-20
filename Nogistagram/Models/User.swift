@@ -21,6 +21,7 @@ class User: Object, Mappable {
     dynamic var imageUrl: String = ""
     dynamic var privacyType: Int = 0
     let comments = List<Comment>()
+    let posts = List<Post>()
     
     override static func primaryKey() -> String? {
         return "id"

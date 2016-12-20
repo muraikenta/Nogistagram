@@ -22,7 +22,8 @@ extension SessionSaver where Self: UIViewController {
         saveAuthData(headers)
         
         let json = JSON(response.result.value)
-        let session = Mapper<Session>().map(JSON: json.dictionaryObject!)!
+        print(json)
+        let session = Mapper<Session>().map(JSON: json["data"].dictionaryObject!)!
         session.save()
     }
     

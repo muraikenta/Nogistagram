@@ -36,15 +36,18 @@ class HomeTableViewController: UITableViewController {
     func loadPosts() {
         if let authToken = SessionHelper.authDict() {
             Alamofire
-                .request("\(Constant.Api.root)/posts", method: .get, headers: authToken)
+                .request("\(Constant.Api.root)/posts/timeline", method: .get, headers: authToken)
                 .validate(statusCode: 200..<300)
                 .responseJSON { response in
                     switch response.result {
                     case .success(let value):
                         let postJsons = JSON(value)
                         for (_, postJson) in postJsons {
+                            let user = Mapper<User>().map(JSON: postJson["user"].dictionaryObject!)!
+                            user.save()
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
+                            user.write(block: { _ in user.posts.append(post) })
                             for (_, commentJson) in postJson["comments"] {
                                 if let comment = Mapper<Comment>().map(JSON: commentJson.dictionaryObject!) {
                                     comment.save()

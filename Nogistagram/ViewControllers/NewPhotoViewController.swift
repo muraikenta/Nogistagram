@@ -10,7 +10,6 @@ import UIKit
 
 class NewPhotoViewController: UIViewController, FusumaDelegate {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
