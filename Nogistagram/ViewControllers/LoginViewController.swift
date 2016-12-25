@@ -115,7 +115,22 @@ class LoginViewController: UIViewController, FacebookLoginable, SessionSaver {
                     let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(tabBarController, animated: true, completion: nil)
                 case .failure(let error):
-                    print(error)
+                    let failAlert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+                    failAlert.title = "メールアドレスもしくはパスワードが正しくありません"
+                    failAlert.addAction(
+                        UIAlertAction(
+                            title: "OK",
+                            style: .cancel,
+                            handler: nil
+                        )
+                    )
+                    self.present(
+                        failAlert,
+                        animated: true,
+                        completion: {
+                            print(error)
+                        }
+                    )
                 }
         }
     }
