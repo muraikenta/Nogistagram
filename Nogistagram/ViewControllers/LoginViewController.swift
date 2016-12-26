@@ -74,16 +74,12 @@ class LoginViewController: UIViewController, FacebookLoginable, SessionSaver {
                 self?.viewModel.login()
             })
             .addDisposableTo(disposeBag)
-        // ViewModel -> UIButtonのenabled
-        viewModel.enableLoginButton
-            .bindTo(loginButton.rx.enabled)
-            .addDisposableTo(disposeBag)
         // UIButtonの背景色をenableLoginButtonの状態によって変える
         viewModel.enableLoginButton
             .bindNext { [weak self] valid in
                 self?.loginButton.backgroundColor = valid ? UIColor(red: 0/255, green: 151/255, blue: 255/255, alpha: 1) : UIColor(red: 150/255, green: 213/255, blue: 255/255, alpha: 1.0)
-        }
-        .addDisposableTo(disposeBag)
+            }
+            .addDisposableTo(disposeBag)
     }
 
     // MARK: - Navigation
