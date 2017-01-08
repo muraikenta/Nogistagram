@@ -29,12 +29,6 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
         addFacebookLoginButton()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        tryToSignIn(userParams: userParams)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,6 +36,8 @@ class RegistrationViewController: UIViewController, FacebookLoginable {
     
     func graphRequestDidComplete(userParams: [String: String]) {
         self.userParams = userParams
+        
+        tryToSignIn(userParams: userParams)
     }
 
     // MARK: - Navigation
