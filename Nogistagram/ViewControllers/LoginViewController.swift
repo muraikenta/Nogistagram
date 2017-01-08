@@ -30,12 +30,6 @@ class LoginViewController: UIViewController, FacebookLoginable, SessionSaver {
         addFacebookLoginButton()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        tryToSignIn(userParams: userParams)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,6 +37,7 @@ class LoginViewController: UIViewController, FacebookLoginable, SessionSaver {
     
     func graphRequestDidComplete(userParams: [String: String]) {
         self.userParams = userParams
+        tryToSignIn(userParams: userParams)
     }
     
     private func addBindings() {
