@@ -53,7 +53,7 @@ class HomeTableViewController: UITableViewController {
                             user.save()
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
-                            user.write(block: { _ in user.posts.append(post) })
+                            user.write { _ in user.posts.append(post) }
                         }
                         self.posts = Post.all()
                         self.tableView.reloadData()
