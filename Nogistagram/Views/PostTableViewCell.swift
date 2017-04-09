@@ -33,12 +33,23 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        for userView: UIView in [self.userNameLabel, self.userImageView] {
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostTableViewCell.handleUserTap(_:)))
+            tapRecognizer.delegate = self
+            userView.addGestureRecognizer(tapRecognizer)
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func handleUserTap(_ gestureRecognizer: UIGestureRecognizer) {
+        let userViewController = UserViewController.instantiate(storyboard: "Main")
+        userViewController.user = self.post.user!
+        self.tableController.navigationController?.pushViewController(userViewController, animated: true)
     }
     
     func deletePost(_ any: Any) {
