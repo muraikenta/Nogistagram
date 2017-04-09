@@ -46,6 +46,6 @@ class Post: Object, Mappable {
     
     static func all() -> [Post] {
         let realm = try! Realm()
-        return Array(realm.objects(Post.self).sorted(byProperty: "createdAt", ascending: false))
+        return Array(realm.objects(Post.self).sorted(byKeyPath: "createdAt", ascending: false))
     }
 }
