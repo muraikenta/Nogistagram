@@ -41,9 +41,13 @@ class HomeTableViewController: UITableViewController {
                 .responseJSON { response in
                     switch response.result {
                     case .success(let value):
+                        Post.deleteAll()
+                        User.deleteAll()
                         let postJsons = JSON(value)
                         for (_, postJson) in postJsons {
-                            let user = Mapper<User>().map(JSON: postJson["user"].dictionaryObject!)!
+                            let user =
+                                User.find(postJson["user"].dictionaryObject!["id"] as! Int)
+                                ?? Mapper<User>().map(JSON: postJson["user"].dictionaryObject!)!
                             user.save()
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
