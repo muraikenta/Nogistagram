@@ -22,8 +22,8 @@ class SeachResultTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)
-        tableView.rowHeight = 60
+        self.tableView.register(UINib(nibName: "SearchResultTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.rowHeight = 60
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +47,7 @@ class SeachResultTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SearchResultTableViewCell
         let user: User = users[indexPath.row]
         cell.user = user
+        cell.selectionStyle = .none
         return cell
     }
     

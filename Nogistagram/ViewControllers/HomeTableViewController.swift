@@ -22,6 +22,8 @@ class HomeTableViewController: UITableViewController {
         imageView.image = UIImage(named: "logo_black.png")
         navigationItem.titleView = imageView
         super.viewDidLoad()
+        
+        self.tableView.allowsSelection = false
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -76,7 +78,7 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return posts.count
