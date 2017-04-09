@@ -88,6 +88,13 @@ extension RealmType where Self: Object {
         }
         return []
     }
+    
+    static func find(_ id: Int) -> Self? {
+        if let realm = try? Realm() {
+            return realm.objects(Self.self).filter("id == \(id)").first
+        }
+        return nil
+    }
 }
 
 
@@ -99,6 +106,14 @@ extension RealmType where Self: Object {
             
             try realm.write {
                 realm.delete(results)
+            }
+        }
+    }
+    
+    static func deleteAll() -> Bool {
+        return realmBlock { realm in
+            try realm.write {
+                realm.delete(self.all())
             }
         }
     }
