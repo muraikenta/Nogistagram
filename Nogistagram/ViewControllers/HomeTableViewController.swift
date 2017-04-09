@@ -80,7 +80,9 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostTableViewCell
+        cell.index = indexPath.row
         cell.post = posts[indexPath.row]
+        cell.tableController = self
         return cell
     }
 
