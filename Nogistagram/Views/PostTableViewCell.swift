@@ -14,6 +14,9 @@ import ObjectMapper
 
 class PostTableViewCell: UITableViewCell {
     
+    var tableController: HomeTableViewController!
+    var index: Int!
+    
     var post: Post = Post() {
         didSet {
             render()
@@ -38,6 +41,29 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func deletePost(_ any: Any) {
+        self.tableController.posts.remove(at: self.index)
+        self.tableController.tableView.reloadData()
+        
+        if let authDict = SessionHelper.authDict() {
+            Alamofire
+                .request("\(Constant.Api.root)/posts/\(self.post.id)", method: .delete, headers: authDict)
+                .validate(statusCode: 200..<300)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success(let value):
+                        self.post.delete()
+                        print(value)
+                    case .failure(let error):
+                        print(error)
+                    }
+                    
+            }
+        } else {
+            print("Error: authToken is nil")
+        }
+    }
+    
     func render() {
         if let user = self.post.user {
             userNameLabel.text = user.uniqueName
@@ -49,8 +75,17 @@ class PostTableViewCell: UITableViewCell {
         likeButton.setImage(UIImage(named: likeButtonImageName), for: .normal)
     }
     
+    @IBAction func menuButtonTapped(_ sender: Any) {
+        let actionSheet: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        if self.post.user!.id == SessionHelper.currentUser()!.id {
+            actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: self.deletePost))
+        }
+        self.tableController.present(actionSheet, animated: true, completion: nil)
+    }
+    
     @IBAction func likeButtonTapped(_ sender: UIButton) {
-        let method: HTTPMethod = post.isLiked ? .delete : .post
+        let method: HTTPMethod = self.post.isLiked ? .delete : .post
         if let authDict = SessionHelper.authDict() {
             Alamofire
                 .request("\(Constant.Api.root)/likes", method: method, parameters: ["post_id" : post.id], headers: authDict)
