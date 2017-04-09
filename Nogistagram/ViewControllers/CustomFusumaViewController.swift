@@ -62,6 +62,7 @@ class CustomFusumaViewController: FusumaViewController {
                         
                         let controller = NewPostDetailViewController()
                         controller.image = result!
+                        controller.afterSave = {self.closeButtonPressed(UIButton()) }
                         self.present(controller, animated: false, completion: nil)
                     })
                 }

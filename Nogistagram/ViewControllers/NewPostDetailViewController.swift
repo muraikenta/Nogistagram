@@ -12,6 +12,7 @@ import Alamofire
 class NewPostDetailViewController: UIViewController {
     
     var image = UIImage()
+    var afterSave = {}
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: PlaceHolderTextView!
     
@@ -34,7 +35,7 @@ class NewPostDetailViewController: UIViewController {
     }
     
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
-        let imageData: Data = UIImagePNGRepresentation(image)!
+        let imageData: Data = UIImagePNGRepresentation(self.image)!
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(self.textView.text!.data(using: String.Encoding.utf8)!, withName: "body")
@@ -50,6 +51,7 @@ class NewPostDetailViewController: UIViewController {
                         if let tabBarController = UIApplication.shared.delegate?.window??.rootViewController as? UITabBarController {
                             tabBarController.selectedIndex = 0
                             self.dismiss(animated: false, completion: nil)
+                            self.afterSave()
                         }
                     }
                 case .failure(let encodingError):
