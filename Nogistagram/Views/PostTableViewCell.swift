@@ -52,6 +52,7 @@ class PostTableViewCell: UITableViewCell {
                 .responseJSON { response in
                     switch response.result {
                     case .success(let value):
+                        self.post.delete()
                         print(value)
                     case .failure(let error):
                         print(error)
