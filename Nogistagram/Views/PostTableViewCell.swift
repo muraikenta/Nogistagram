@@ -77,11 +77,10 @@ class PostTableViewCell: UITableViewCell {
     
     @IBAction func menuButtonTapped(_ sender: Any) {
         let actionSheet: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let deleteAction: UIAlertAction = UIAlertAction(title: "Delete",
-                                                        style: .destructive,
-                                                        handler: self.deletePost)
-        actionSheet.addAction(deleteAction)
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        if self.post.user!.id == SessionHelper.currentUser()!.id {
+            actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: self.deletePost))
+        }
         self.tableController.present(actionSheet, animated: true, completion: nil)
     }
     
