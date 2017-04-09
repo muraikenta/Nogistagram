@@ -20,6 +20,9 @@ class UserViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userIntroductionLabel: UILabel!
     @IBOutlet weak var userWebsiteLabel: UILabel!
+    @IBOutlet weak var postsCountLabel: UILabel!
+    @IBOutlet weak var followersCountLabel: UILabel!
+    @IBOutlet weak var followingsCountLabel: UILabel!
     @IBOutlet weak var postCollectionWrapper: UIView!
     
     override func viewDidLoad() {
@@ -76,8 +79,8 @@ class UserViewController: UIViewController {
                         user.followingsCount = userDict["followings_count"] as! Int
                     }
                     self.postsCountLabel.text = String(user.postsCount)
-                    self.followersCount.text = String(user.followersCount)
-                    self.followingsCount.text = String(user.followingsCount)
+                    self.followersCountLabel.text = String(user.followersCount)
+                    self.followingsCountLabel.text = String(user.followingsCount)
                 case .failure(let error):
                     print(error)
                 }
