@@ -20,6 +20,9 @@ class UserViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userIntroductionLabel: UILabel!
     @IBOutlet weak var userWebsiteLabel: UILabel!
+    @IBOutlet weak var postsCountLabel: UILabel!
+    @IBOutlet weak var followersCountLabel: UILabel!
+    @IBOutlet weak var followingsCountLabel: UILabel!
     @IBOutlet weak var postCollectionWrapper: UIView!
     
     override func viewDidLoad() {
@@ -29,12 +32,13 @@ class UserViewController: UIViewController {
         
         self.user = self.user ?? SessionHelper.currentUser()!
         self.user.save()
-        self.renderUserData()
+        self.renderBasicUserData()
         
         self.postCollectionView = PostCollectionView.instantiate()
         self.postCollectionView.frame = self.postCollectionWrapper.bounds
         self.postCollectionWrapper.addSubview(self.postCollectionView)
         
+        self.loadDetailedUserData()
         self.loadPosts()
     }
     
@@ -47,11 +51,42 @@ class UserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func renderUserData() {
+    func renderBasicUserData() {
         self.title = user.uniqueName
         self.userNameLabel.text = self.user.name
         self.userIntroductionLabel.text = self.user.introduction
         self.userWebsiteLabel.text = self.user.website
+    }
+    
+    func loadDetailedUserData() {
+        guard let authDict = SessionHelper.authDict() else {
+            return   
+        }
+        
+        Alamofire
+            .request("\(Constant.Api.root)/users/\(self.user.id)", method: .get, headers: authDict)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let userDict = JSON(value).dictionaryObject!
+                    guard let user = User.find(userDict["id"] as! Int) else {
+                        return
+                    }
+                    user.write {_ in
+                        user.postsCount = userDict["posts_count"] as! Int
+                        user.followersCount = userDict["followers_count"] as! Int
+                        user.followingsCount = userDict["followings_count"] as! Int
+                    }
+                    self.postsCountLabel.text = String(user.postsCount)
+                    self.followersCountLabel.text = String(user.followersCount)
+                    self.followingsCountLabel.text = String(user.followingsCount)
+                case .failure(let error):
+                    print(error)
+                }
+                
+        }
+        
     }
     
 
@@ -68,7 +103,7 @@ class UserViewController: UIViewController {
                             let post = Mapper<Post>().map(JSON: postJson.dictionaryObject!)!
                             post.save()
                             if self.user.posts.filter(NSPredicate(format: "id = \(post.id)")).isEmpty {
-                                self.user.write(block: { _ in self.user.posts.append(post) })
+                                self.user.write { _ in self.user.posts.append(post) }
                             }
                         }
                         self.postCollectionView.posts = Array(self.user.posts)

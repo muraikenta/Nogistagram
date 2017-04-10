@@ -50,7 +50,7 @@ extension RealmType where Self: Object {
 
 extension Array where Element: Object {
     
-    func write(block: (Realm) -> Void) -> Bool {
+    func write(_ block: (Realm) -> Void) -> Bool {
         return realmBlock { realm in
             try realm.write {
                 block(realm)
