@@ -17,6 +17,7 @@
 		242FC0951DA65337008B23AB /* .keep in Resources */ = {isa = PBXBuildFile; fileRef = 242FC0941DA65337008B23AB /* .keep */; };
 		242FC0971DA66698008B23AB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FC0961DA66698008B23AB /* SnapKit.framework */; };
 		242FC0991DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */; };
+		24427B741EA202E000253E34 /* Follow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24427B731EA202E000253E34 /* Follow.swift */; };
 		246BD52F1DBE33CB0033C92A /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246BD52E1DBE33CB0033C92A /* UICollectionView+.swift */; };
 		2472C7461DBCAEE700094B28 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7451DBCAEE700094B28 /* Realm+.swift */; };
 		2472C74A1DBCB8FF00094B28 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472C7491DBCB8FF00094B28 /* RealmHelper.swift */; };
@@ -34,6 +35,7 @@
 		2491A8821DA10DA500C552EB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8801DA10DA500C552EB /* Login.storyboard */; };
 		2491A8841DA10DA500C552EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8831DA10DA500C552EB /* Assets.xcassets */; };
 		2491A8871DA10DA500C552EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491A8851DA10DA500C552EB /* LaunchScreen.storyboard */; };
+		2494FFA51E9A112D00327534 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2494FFA41E9A112D00327534 /* MypageViewController.swift */; };
 		24C97B251DB103C5001488A2 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C97B241DB103C5001488A2 /* FSAlbumView.xib */; };
 		24C97B271DB103CE001488A2 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B261DB103CE001488A2 /* FSAlbumView.swift */; };
 		24C97B301DB103E2001488A2 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C97B281DB103E2001488A2 /* FSAlbumViewCell.swift */; };
@@ -98,6 +100,7 @@
 		242FC0941DA65337008B23AB /* .keep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
 		242FC0961DA66698008B23AB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueNameRegistrationViewController.swift; sourceTree = "<group>"; };
+		24427B731EA202E000253E34 /* Follow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Follow.swift; sourceTree = "<group>"; };
 		246BD52E1DBE33CB0033C92A /* UICollectionView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		2472C7451DBCAEE700094B28 /* Realm+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		2472C7491DBCB8FF00094B28 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		2491A8831DA10DA500C552EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2491A8861DA10DA500C552EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2491A8881DA10DA500C552EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2494FFA41E9A112D00327534 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		24C97B241DB103C5001488A2 /* FSAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSAlbumView.xib; sourceTree = "<group>"; };
 		24C97B261DB103CE001488A2 /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
 		24C97B281DB103E2001488A2 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumViewCell.swift; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 				24C97B431DB64FAA001488A2 /* Post.swift */,
 				FC5CF36B1DB4EE0100BBF3BA /* Session.swift */,
 				2404BE1C1DBA33DF00D57AF4 /* User.swift */,
+				24427B731EA202E000253E34 /* Follow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				24E26B991DAA9B7000AFA159 /* SettingsTableViewController.swift */,
 				242FC0981DA7CA8F008B23AB /* UniqueNameRegistrationViewController.swift */,
 				2472C74E1DBCC3D500094B28 /* UserViewController.swift */,
+				2494FFA41E9A112D00327534 /* MypageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				2472C7511DBCD5D100094B28 /* StoryBoardInstantiatable.swift in Sources */,
 				24777DE81DC17A00006BD17B /* PostCollectionView.swift in Sources */,
 				FC3582221DAB82F200F7983E /* LoginViewModel.swift in Sources */,
+				2494FFA51E9A112D00327534 /* MypageViewController.swift in Sources */,
 				24C97B481DB90044001488A2 /* ExploreViewController.swift in Sources */,
 				24777DF31DC17DF8006BD17B /* PostCollectionViewCell.swift in Sources */,
 				FC35821A1DAA1E6900F7983E /* Regexp.swift in Sources */,
@@ -553,6 +560,7 @@
 				2472C74F1DBCC3D500094B28 /* UserViewController.swift in Sources */,
 				24C97B421DB64DFD001488A2 /* PostTableViewCell.swift in Sources */,
 				24C97B4F1DB90555001488A2 /* SeachResultTableViewController.swift in Sources */,
+				24427B741EA202E000253E34 /* Follow.swift in Sources */,
 				FC35821C1DAA246E00F7983E /* RegistrationViewModel.swift in Sources */,
 				2491A87D1DA10DA500C552EB /* AppDelegate.swift in Sources */,
 				241D92C81DBF75600012F66A /* UIImageView+.swift in Sources */,

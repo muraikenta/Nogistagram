@@ -125,6 +125,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQp-8y-kgV">
+                                <rect key="frame" x="117" y="114" width="233" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.50588235294117645" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="フォローする">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onFollowButtonTapped:" destination="4Jn-19-mqX" eventType="touchUpInside" id="mIK-2T-XFs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -141,6 +153,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="followButton" destination="AQp-8y-kgV" id="cco-69-Qvc"/>
                         <outlet property="followersCountLabel" destination="vXO-f6-Bie" id="HZ2-PX-jJV"/>
                         <outlet property="followingsCountLabel" destination="u1i-mw-Y9S" id="ZcO-RX-ybj"/>
                         <outlet property="postCollectionWrapper" destination="LfI-cg-uA6" id="OgN-qS-mWw"/>
@@ -168,7 +181,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fpN-rX-EGD" id="7Sp-OH-BUe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -249,7 +262,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="451"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eSj-Jz-tDD" id="XAt-0P-eTm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-ve-L17">
