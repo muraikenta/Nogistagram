@@ -15,6 +15,21 @@ class UserViewController: UIViewController {
     
     var user: User!
     var postCollectionView = PostCollectionView()
+    var isFollwing: Bool = false {
+        didSet {
+            if isFollwing {
+                followButton.setTitle("フォロー中", for: .normal)
+                followButton.backgroundColor = .white
+                followButton.setTitleColor(.black, for: .normal)
+                followButton.layer.borderColor = UIColor.black.cgColor
+                followButton.layer.borderWidth = 1
+            } else {
+                followButton.setTitle("フォローする", for: .normal)
+                followButton.backgroundColor = #colorLiteral(red: 0.347109437, green: 0.5949048996, blue: 1, alpha: 1)
+                followButton.setTitleColor(.white, for: .normal)
+            }
+        }
+    }
 
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -24,6 +39,7 @@ class UserViewController: UIViewController {
     @IBOutlet weak var followersCountLabel: UILabel!
     @IBOutlet weak var followingsCountLabel: UILabel!
     @IBOutlet weak var postCollectionWrapper: UIView!
+    @IBOutlet weak var followButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +55,7 @@ class UserViewController: UIViewController {
         self.postCollectionWrapper.addSubview(self.postCollectionView)
         
         self.loadDetailedUserData()
+        self.loadFollow()
         self.loadPosts()
     }
     
@@ -114,6 +131,69 @@ class UserViewController: UIViewController {
             }
         } else {
             print("Error: authToken is nil")
+        }
+    }
+    
+    func loadFollow() {
+        guard let authDict = SessionHelper.authDict() else {
+            return
+        }
+        
+        let currentUser = SessionHelper.currentUser()!
+        let parameters: [String: Int] = [
+            "from_user_id": currentUser.id,
+            "to_user_id": self.user.id,
+        ]
+        
+        Alamofire
+            .request("\(Constant.Api.root)/follows/find", method: .get, parameters: parameters,headers: authDict)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let follow = JSON(value)["follow"]
+                    self.isFollwing = follow != nil
+                case .failure(let error):
+                    print(error)
+                }
+                
+        }
+        
+    }
+    
+    @IBAction func onFollowButtonTapped(_ sender: UIButton) {
+        guard let authDict = SessionHelper.authDict() else {
+            return   
+        }
+        
+        let method: HTTPMethod = self.isFollwing ? .delete : .post
+        
+        let fromUserId = SessionHelper.currentUser()!.id
+        let toUserId = self.user.id
+        let parameters: [String: Int] = [
+            "from_user_id": fromUserId,
+            "to_user_id": toUserId,
+        ]
+        
+        Alamofire
+            .request("\(Constant.Api.root)/follows", method: method, parameters: parameters, headers: authDict)
+            .validate(statusCode: 200..<300)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let followJson = JSON(value)["follow"].dictionaryObject!
+                    self.isFollwing = !self.isFollwing
+                    if self.isFollwing {
+                        let follow = Mapper<Follow>().map(JSON: followJson)
+                        follow?.save()
+                    } else {
+                        let follow = Follow.find(followJson["id"] as! Int)
+                        follow?.delete()
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+                
         }
     }
 

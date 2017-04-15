@@ -95,6 +95,13 @@ extension RealmType where Self: Object {
         }
         return nil
     }
+    
+    static func findBy(_ predicateFormat: String) -> Self? {
+        if let realm = try? Realm() {
+            return realm.objects(Self.self).filter(predicateFormat).first
+        }
+        return nil
+    }
 }
 
 
